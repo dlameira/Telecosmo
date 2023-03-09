@@ -1,0 +1,2 @@
+class StoryTagsController < ApplicationController
+end
