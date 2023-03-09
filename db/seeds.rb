@@ -5,5 +5,29 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create(email: "joao@gmail.com", password: "123456", nickname: "Example User", first_name: "Example", last_name: "User", birthday: Date.new(1990, 1, 1), bio: "I'm an example user!")
+require "faker"
 
+user = User.create(email: "pokemon@gmail.com", password: "123456", nickname: "Pikachu", first_name: "Pokemon", last_name: "Silva", birthday: Date.new(1990, 1, 1), bio: "I'm an example user!")
+
+5.times do
+
+  p 'creating 5 universes'
+  universe = Universe.new(
+    title: Faker::Book.title,
+    callout: Faker::Quote.yoda,
+    content: Faker::Quote.matz
+  )
+  universe.user = user
+  universe.save!
+
+  (2..4).to_a.sample.times do
+    story = Story.new(
+      title: Faker::Book.title,
+      callout: Faker::Quote.yoda,
+      reading_time: (5..20).to_a.sample
+    )
+    story.universe = universe
+    story.save!
+    p 'created a story'
+  end
+end
