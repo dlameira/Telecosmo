@@ -1,3 +1,10 @@
 <div class="container">
-
+  <%= form_with url: tags_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a book"
+  %>
+  <%= submit_tag "Search", class: "button-one" %>
+<% end %>
 </div>
