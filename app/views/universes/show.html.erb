@@ -1,6 +1,14 @@
-<h1><%= @universe.title %></h1>
+<div class="container mt-5">
+  <div class="t-main-card">
+    <div class="t-card-universe">
+      <%= image_tag('teste.jpg', class: "universe-image") %>
+      <h1 class="t-card-universe-title"><%= @universe.title %></h1>
+      <h3 class="t-card-universe-title"><%= @universe.callout %></h3>
+      <p class="t-card-universe-content"><%= @universe.content %></p>
+    </div>
+  </div>
+</div>
 
-<p><%= @universe.callout %></p>
 
 <p><%= @universe.content %></p>
 
