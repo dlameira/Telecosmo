@@ -1,10 +1,16 @@
 .t-card-universe{
-background: #FF8B97;
 box-shadow: 1.9403px 1.9403px 0px #000000;
 border-radius: 7.76119px;
 margin: 16px 10px;
 display: flex;
 padding: 15px;
+}
+.t-card-universe:nth-child(odd){
+  background-color: $f16;
+}
+
+.t-card-universe:nth-child(even){
+  background-color: $f12;
 }
 
 .t-card-universe h3{
