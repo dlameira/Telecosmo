@@ -1,0 +1,56 @@
+.t-card-story{
+box-shadow: 1.9403px 1.9403px 0px #000000;
+border-radius: 7.76119px;
+margin: 16px 10px;
+display: flex;
+padding: 15px;
+}
+.t-card-story:nth-child(odd){
+  background-color: $f16;
+}
+
+.t-card-story:nth-child(even){
+  background-color: $f12;
+}
+
+.t-card-story h3{
+  color: #2C2E31;
+  margin-bottom: 5px;
+}
+
+.t-card-story p{
+  color: #2C2E31;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+}
+
+.t-card-story span{
+  color: #2C2E31;
+  text-align: right;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.t-card-story-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.t-card-story-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.story-img{
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
