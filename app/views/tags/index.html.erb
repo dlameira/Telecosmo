@@ -7,4 +7,9 @@
   %>
   <%= submit_tag "Search", class: "button-one" %>
 <% end %>
+
+  <% @universes.each do |universe| %>
+  <%= universe.title %>
+  <% end %>
+
 </div>
