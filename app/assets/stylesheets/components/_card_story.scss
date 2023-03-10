@@ -1,9 +1,10 @@
 .t-card-story{
 box-shadow: 1.9403px 1.9403px 0px #000000;
-border-radius: 7.76119px;
-margin: 16px 10px;
+border-radius: 8px;
+margin: 16px auto;
 display: flex;
 padding: 15px;
+max-width: 95vw;
 }
 .t-card-story:nth-child(odd){
   background-color: $f16;

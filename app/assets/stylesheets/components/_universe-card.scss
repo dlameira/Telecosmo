@@ -2,8 +2,8 @@
   padding: 15px;
   background: #2C2E31;
   border: 2px solid #43474C;
-
-
+  max-width: 95vw;
+  margin: 16px auto;
 }
 
 .t-main-card{
@@ -38,8 +38,6 @@
   line-height: 18px;
 }
 
-
-
-
-
-
+body{
+  padding-bottom: 70px;
+}
