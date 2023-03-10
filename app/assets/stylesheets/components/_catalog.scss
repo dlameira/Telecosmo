@@ -4,7 +4,7 @@
   display: flex;
   overflow-x: auto;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
@@ -40,4 +40,17 @@
   /* c7 */
 
   color: #BCBFC3;
+}
+
+.home-categories-titles{
+  font-family: 'Sharp Sans Display No2';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.045em;
+  color: $cream;
+  text-shadow: 2px 2px 0px #000000;
+  margin: 0 0 0 15px;
+  padding-bottom: 0px;
 }
