@@ -80,4 +80,5 @@ group :test do
   gem "webdrivers"
 end
 
+gem "pg_search"
 gem "faker"
