@@ -1,9 +1,12 @@
 <div class="container mt-5">
-  <div class="card">
-    <div class="card-body text-center">
-      <h1 class="card-title"><%= @universe.title %></h1>
-      <h2 class="card-text"><%= @universe.callout %></h2>
-      <p class="card-text"><%= @universe.content %></p>
+  <div class="t-main-card">
+    <div class="t-card-universe">
+      <%= image_tag('midnight_gospel.jpg', class: "universe-image") %>
+      <h1 class="t-card-universe-title"><%= @universe.title %></h1>
+      <h3 class="t-card-universe-title"><%= @universe.callout %></h3>
+      <p class="t-card-universe-content"><%= @universe.content %></p>
     </div>
   </div>
 </div>
+
+
