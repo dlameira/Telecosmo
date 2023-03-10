@@ -1,6 +1,15 @@
 <div class="t-footer">
-  <i class="fas fa-home"></i>
+  <%= link_to root_path do %>
+    <i class="fas fa-home"></i>
+  <% end %>
   <i class="fas fa-users"></i>
-  <i class="fas fa-search"></i>
-  <i class="fas fa-book"></i>
+
+  <%= link_to tags_path do %>
+    <i class="fas fa-search"></i>
+  <% end %>
+
+  <%= link_to user_path(current_user) do %>
+    <i class="fas fa-book"></i>
+  <% end %>
+
 </div>
