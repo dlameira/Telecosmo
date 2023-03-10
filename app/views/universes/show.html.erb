@@ -13,20 +13,20 @@
 <p><%= @universe.content %></p>
 
 <% @universe.stories.each do |story| %>
-  <div class="t-card-universe container">
+  <div class="t-card-story container">
 
     <div>
       <%= image_tag "teste.png", class:"story-img" %>
     </div>
 
-    <div class="t-card-universe-content">
+    <div class="t-card-story-content">
 
       <div>
       <h3><%= story.title %></h3>
       <p><%= story.callout %></p>
       </div>
 
-      <div class="t-card-universe-details">
+      <div class="t-card-story-details">
         <span class="sticker-tag">Mistery</span>
         <span><%= story.reading_time %> minutes</span>
       </div>
