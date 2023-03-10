@@ -1,0 +1,12 @@
+.t-footer{
+  background-color: $dark-gray;
+  height: 70px;
+  color: $cream;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
