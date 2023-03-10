@@ -1,0 +1,12 @@
+{
+  "favorites.resources": [
+    {
+      "filePath": "app/controllers/users_controller.rb",
+      "group": "Default"
+    },
+    {
+      "filePath": "app/views/users/show.html.erb",
+      "group": "Default"
+    }
+  ]
+}
