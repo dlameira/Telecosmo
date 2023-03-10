@@ -8,7 +8,7 @@
 require "faker"
 
 user = User.create(email: "pokemon@gmail.com", password: "123456", nickname: "Pikachu", first_name: "Pokemon", last_name: "Silva", birthday: Date.new(1990, 1, 1), bio: "I'm an example user!")
-
+user_two =User.create(email: "charmander@gmail.com", password: "123456", nickname: "Charmander", first_name: "Charles", last_name: "Soares", birthday: Date.new(1992, 2, 1), bio: "I'm a pokemon!")
 5.times do
 
   p 'creating 5 universes'
