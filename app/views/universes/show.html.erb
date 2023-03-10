@@ -3,3 +3,27 @@
 <p><%= @universe.callout %></p>
 
 <p><%= @universe.content %></p>
+
+<% @universe.stories.each do |story| %>
+  <div class="t-card-universe container">
+
+    <div>
+      <%= image_tag "teste.png", class:"story-img" %>
+    </div>
+
+    <div class="t-card-universe-content">
+
+      <div>
+      <h3><%= story.title %></h3>
+      <p><%= story.callout %></p>
+      </div>
+
+      <div class="t-card-universe-details">
+        <span class="sticker-tag">Mistery</span>
+        <span><%= story.reading_time %> minutes</span>
+      </div>
+
+    </div>
+
+  </div>
+<% end %>
