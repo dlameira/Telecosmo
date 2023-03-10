@@ -1,0 +1,43 @@
+
+
+.wrapper{
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.wrapper::-webkit-scrollbar{
+  display: none;
+}
+.universe-folder-img{
+  height: 116px;
+  width: 116px;
+}
+
+
+.wrapper h3{
+  font-family: 'Doyle';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFAF1;
+  text-align: left;
+  padding: 5px 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+.wrapper p {
+  font-family: 'Sharp Sans Display No2';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  /* c7 */
+
+  color: #BCBFC3;
+}
