@@ -5,11 +5,14 @@
       height: 200, crop: :fill) %>
     </div>
 
-    <div class="container d-flex justify-content-center align-items-center">
-      <div class=>
-        <h3>I'm</h3>
-        <h1><%=@user.nickname%></h1>
-        <p><%=@user.bio%></p>
+    <div class="container d-flex align-items-center">
+      <div class="row">
+        <p class="fw-bold fs-4 mb-1 pb-0 mt-4">I'm</p>
+        <h1 class="fs-1 mt-0 pt-0 mb-5"><%=@user.nickname%></h1>
+      </div>
+
+      <div>
+        <p class="mt-5"><%=@user.bio%></p>
       </div>
     </div>
   </div>
