@@ -1,16 +1,32 @@
-<div class="container mt-5">
+
+
+<div class="t-universe-container">
   <div class="t-main-card">
-    <div class="t-card-universe">
-      <%= image_tag('teste.jpg', class: "universe-image") %>
-      <h1 class="t-card-universe-title"><%= @universe.title %></h1>
-      <h3 class="t-card-universe-title"><%= @universe.callout %></h3>
-      <p class="t-card-universe-content"><%= @universe.content %></p>
+
+
+    <%= image_tag('teste.png', class: "universe-image") %>
+
+
+    <div class="universe-title-description">
+      <h3><%= @universe.title %></h3>
+      <h6><%= @universe.callout %></h6>
+    </div>
+  </div>
+
+  <div class="card-description">
+      <p><%= @universe.content %></p>
+  </div>
+    <div class="icon">
+       <i class="fa-solid fa-share"></i>
+       <i class="fa-solid fa-heart"></i>
+  </div>
     </div>
   </div>
 </div>
 
 
-<p><%= @universe.content %></p>
+
+
 
 <% @universe.stories.each do |story| %>
   <div class="t-card-story container">

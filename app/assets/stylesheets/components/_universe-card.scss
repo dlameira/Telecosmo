@@ -1,16 +1,45 @@
+.t-universe-container{
+  padding: 15px;
+  background: #2C2E31;
+  border: 2px solid #43474C;
+
+
+}
+
 .t-main-card{
-  background-color: $dark-gray;
-  text-align: center;
+  display:flex;
 }
 
-.t-card-universe-title{
-  text-align: right;
+
+
+.universe-title-description{
+  font-family: 'Doyle';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
+
 .universe-image{
-  width: 380px;
-  height: 383px;
-  left: 25px;
-  top: 96px;
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
 
 }
+
+.t-card-universe-content{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+
+
+
 
