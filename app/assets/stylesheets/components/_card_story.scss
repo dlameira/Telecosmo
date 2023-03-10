@@ -1,24 +1,24 @@
-.t-card-universe{
+.t-card-story{
 box-shadow: 1.9403px 1.9403px 0px #000000;
 border-radius: 7.76119px;
 margin: 16px 10px;
 display: flex;
 padding: 15px;
 }
-.t-card-universe:nth-child(odd){
+.t-card-story:nth-child(odd){
   background-color: $f16;
 }
 
-.t-card-universe:nth-child(even){
+.t-card-story:nth-child(even){
   background-color: $f12;
 }
 
-.t-card-universe h3{
+.t-card-story h3{
   color: #2C2E31;
   margin-bottom: 5px;
 }
 
-.t-card-universe p{
+.t-card-story p{
   color: #2C2E31;
   font-style: normal;
   font-weight: 500;
@@ -28,7 +28,7 @@ padding: 15px;
   margin-top: 5px;
 }
 
-.t-card-universe span{
+.t-card-story span{
   color: #2C2E31;
   text-align: right;
   font-style: italic;
@@ -37,13 +37,13 @@ padding: 15px;
   line-height: 13px;
 }
 
-.t-card-universe-content{
+.t-card-story-content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.t-card-universe-details{
+.t-card-story-details{
   display: flex;
   justify-content: space-between;
   align-items: center;
