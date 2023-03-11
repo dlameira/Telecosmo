@@ -1,0 +1,5 @@
+<%= form_for @friendship, url: friendship_path(@friendship), method: :put do |f| %>
+  <%= f.label :is_accepted %>
+  <%= f.check_box :is_accepted %>
+  <%= f.submit "Submit" %>
+<% end %>
