@@ -24,6 +24,19 @@
       <% if current_user != @user %>
         <%= button_to "Add as a friend", add_friend_user_path(@user), method: :post %>
        <% end %>
+
+        <%@pending_friendships.each do |f|%>
+        <%= "#{f.asker.nickname} wants to be your friend" %>
+        <%= simple_form_for f, url:  accept_friendship_user_path(f) do |form| %>
+        <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
+        <%= form.button :submit, "Accept Friendship" %>
+        <% end %>
+        <% end %>
+
+
+
+
+
       <p>13</p>
     </div>
 
@@ -39,6 +52,8 @@
 
 
   </div>
+
+
 
   <div class="d-flex justify-content-around">
 

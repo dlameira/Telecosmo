@@ -6,6 +6,7 @@ class FriendshipsController < ApplicationController
   def update
     friendship = Friendship.find(params[:id])
     friendship.update(friendship_params)
+    raise
     redirect_to current_user
   end
 
