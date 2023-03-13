@@ -4,7 +4,7 @@
 
     <div class="t-main-card">
 
-   
+
     <%= image_tag @universe.thumb_url, class: "universe-image" %>
 
       <div class="universe-title-description">
@@ -49,11 +49,16 @@
 
         <div class="t-card-story-details">
           <span class="sticker-tag">Mistery</span>
-
-              <%= link_to universe_bookmarks_path(@universe), data: { turbo_method: 'POST'} do %>
-                <i class="far fa-bookmark"></i>
+            <% if story.universe.bookmarks.any? %>
+              <i class="fas fa-bookmark"></i>
+              <% else %>
+              <%= simple_form_for [@universe, @bookmark] do |f|%>
+                <%= button_tag type: 'submit', class: "button postfix" do %>
+                  <i class="far fa-bookmark" aria-hidden="true"></i>
+                <% end %>
               <% end %>
 
+            <% end %>
           <span><%= story.reading_time %> minutes</span>
         </div>
 
