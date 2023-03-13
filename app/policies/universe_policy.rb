@@ -9,4 +9,8 @@ class UniversePolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def search?
+    true
+  end
 end
