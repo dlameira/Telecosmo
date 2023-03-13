@@ -3,7 +3,7 @@
       <% @tags.each_with_index do |tag, index| %>
         <div class="card-category search-bg-<%= colors[index] %>">
           <%= image_tag "personagem_perdido.png", width: "60%" %>
-          <h3>Tag.name</h3>
+          <h3><%= tag.name %></h3>
         </div>
       <% end %>
   </div>
