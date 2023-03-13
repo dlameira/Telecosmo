@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "search", to: "universes#search"
   resources :universes, only: [:index, :show] do
-    resources :bookmarks, only: [ :create]
+    resources :bookmarks, only: [:create, :destroy]
   end
 
   resources :tags, only: [:index]
