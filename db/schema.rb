@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,12 +52,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
   end
 
   create_table "friendships", force: :cascade do |t|
-    t.bigint "asked_id"
+    t.bigint "asker_id"
     t.bigint "receiver_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_accepted", default: false
-    t.index ["asked_id"], name: "index_friendships_on_asked_id"
+    t.index ["asker_id"], name: "index_friendships_on_asker_id"
     t.index ["receiver_id"], name: "index_friendships_on_receiver_id"
   end
 
@@ -87,6 +87,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
     t.bigint "universe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "edition_number"
+    t.string "thumb_url"
     t.index ["universe_id"], name: "index_stories_on_universe_id"
   end
 
@@ -112,6 +114,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "thumb_url"
     t.index ["user_id"], name: "index_universes_on_user_id"
   end
 
@@ -136,7 +139,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookmarks", "universes"
   add_foreign_key "bookmarks", "users"
-  add_foreign_key "friendships", "users", column: "asked_id"
+  add_foreign_key "friendships", "users", column: "asker_id"
   add_foreign_key "friendships", "users", column: "receiver_id"
   add_foreign_key "pages", "stories"
   add_foreign_key "stories", "universes"
