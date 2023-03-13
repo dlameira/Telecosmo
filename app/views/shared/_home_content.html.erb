@@ -28,4 +28,16 @@
     <h3>Lost in Woods</h3>
     <p>Telecosmo</p>
   </div>
+
+  <%@universes.each do |u|%>
+    <%= link_to universe_path(u) do %>
+      <div class="universe-folder">
+        <%= image_tag u.thumb_url, class: 'universe-folder-img' %>
+        <h3><%=u.title%></h3>
+        <p><%=u.user.nickname%></p>
+      </div>
+    <%end%>
+  <%end%>
+
+
 </div>
