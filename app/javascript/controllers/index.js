@@ -12,3 +12,6 @@ application.register("friendship", FriendshipController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import SearchUniversesController from "./search_universes_controller"
+application.register("search-universes", SearchUniversesController)

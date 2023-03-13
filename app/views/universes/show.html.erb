@@ -4,7 +4,8 @@
 
     <div class="t-main-card">
 
-      <%= image_tag('teste.png', class: "universe-image") %>
+   
+    <%= image_tag @universe.thumb_url, class: "universe-image" %>
 
       <div class="universe-title-description">
         <h3><%= @universe.title %></h3>
@@ -32,7 +33,7 @@
     <div class="t-card-story container" data-action="click->expander-stories#expand" data-expander-stories-target="story">
 
       <div>
-        <%= image_tag "teste.png", class:"story-img" %>
+        <%= image_tag story.thumb_url, class:"story-img" %>
       </div>
 
       <div class="t-card-story-content">

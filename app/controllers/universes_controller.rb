@@ -15,5 +15,9 @@ class UniversesController < ApplicationController
     else
       @universes = policy_scope(Universe)
     end
+    respond_to do |format|
+      format.html
+      format.text { render partial: "universes/list", locals: {universes: @universes}, formats: [:html] }
+    end
   end
 end

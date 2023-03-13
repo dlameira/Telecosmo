@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -87,6 +87,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
     t.bigint "universe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "edition_number"
+    t.string "thumb_url"
     t.index ["universe_id"], name: "index_stories_on_universe_id"
   end
 
@@ -112,6 +114,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_202330) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "thumb_url"
     t.index ["user_id"], name: "index_universes_on_user_id"
   end
 
