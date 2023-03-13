@@ -2,6 +2,8 @@ class UniversesController < ApplicationController
   def show
     @universe = Universe.find(params[:id])
     authorize @universe
+    @bookmark = Bookmark.new
+    authorize @bookmark
   end
 
   def search

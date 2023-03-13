@@ -49,6 +49,11 @@
 
         <div class="t-card-story-details">
           <span class="sticker-tag">Mistery</span>
+
+              <%= link_to universe_bookmarks_path(@universe), data: { turbo_method: 'POST'} do %>
+                <i class="far fa-bookmark"></i>
+              <% end %>
+
           <span><%= story.reading_time %> minutes</span>
         </div>
 

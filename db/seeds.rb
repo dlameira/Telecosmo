@@ -9,7 +9,7 @@ user = User.create!(email: "daniel@telecosmo.com.br", password: "123456", nickna
 tags = ['Action', 'Mystery', 'Comedy', 'Horror', 'Sci-fi', 'Detective', 'Romance', 'Drama', 'Adventure', 'Fantasy']
 tags.each do |tag|
   tag1 = Tag.new
-  tag.name = tag
+  tag1.name = tag
 end
 
 lostinwoods = Universe.new(
