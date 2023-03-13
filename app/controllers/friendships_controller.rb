@@ -9,6 +9,7 @@ def update
   redirect_to current_user
 end
 
+
 private
 
 def friendship_params
