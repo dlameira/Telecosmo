@@ -3,15 +3,9 @@ class Universe < ApplicationRecord
   has_many :stories
 
   include PgSearch::Model
-  multisearchable against: %i[title content callout]
-
-  include PgSearch::Model
-  pg_search_scope :global_search,
-                  against: %i[title content callout],
-                  associated_against: {
-                    story: %i[title content callout]
-                  },
-                  using: {
-                    tsearch: { prefix: true }
-                  }
+  pg_search_scope :search_by_title,
+  against: [:title],
+  using: {
+    tsearch: { prefix: true }
+  }
 end
