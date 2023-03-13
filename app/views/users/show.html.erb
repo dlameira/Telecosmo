@@ -21,6 +21,9 @@
   <div class="profile-container-card" >
     <div class="profile-content">
       <h3>friends</h3>
+      <% if current_user != @user %>
+        <%= button_to "Add as a friend", add_friend_user_path(@user), method: :post %>
+       <% end %>
       <p>13</p>
     </div>
 
@@ -33,6 +36,7 @@
       <h3>reads</h3>
       <p>1</p>
     </div>
+
 
   </div>
 
@@ -56,3 +60,7 @@
     </div>
 
 </div>
+
+
+
+
