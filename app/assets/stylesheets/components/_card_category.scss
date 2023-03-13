@@ -1,0 +1,71 @@
+.card-category {
+  width: 170px;
+  height: 100px;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 21px;
+  text-align: center;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-bg-pink {
+  background-color: #F65599;
+}
+
+.search-bg-green {
+  background-color: #86FF31;
+}
+
+.search-bg-yellow {
+  background-color: #FAAA39;
+}
+
+.search-bg-blue {
+  background-color: #57CFDF;
+}
+
+.search-bg-grey {
+  background-color: #43474C;
+}
+
+.search-bg-lightgrey {
+  background-color: #BCBFC3;
+}
+
+.search-bg-darkblue {
+  background-color: #1B84C2;
+}
+
+.search-bg-purple {
+  background-color: #5F5FEC;
+}
+
+.search-bg-white {
+  background-color: #FFF3DC;
+}
+
+.search-bg-red {
+  background-color: #EF1741;
+}
+
+$f1: #FF533F;
+$f2: #EF1741;
+$f3: #A51040;
+$f4: #BD382B;
+$f5: #FAAA39;
+$f6: #EF1741;
+$f7: #C9DE3E;
+$f8: #86FF31;
+$f9: #267B2F;
+$f10: #2B5071;
+$f11: #1B84C2;
+$f12: #57CFDF;
+$f13: #5F5FEC;
+$f14: #7993F6;
+$f15: #F65599;
+$f16: #FF8B97;
+$f17: #FFF3DC;
