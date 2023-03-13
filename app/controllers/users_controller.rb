@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :destroy, :add_friend, :accept_friendship]
+  before_action :set_user, only: [:show, :add_friend]
   def show
     @user = User.find(params[:id])
     authorize @user
+    @pending_friendships = current_user.friendships_as_receiver.where(is_accepted: false)
   end
+
   def add_friend
     authorize @user
     if current_user != @user
@@ -11,13 +13,22 @@ class UsersController < ApplicationController
     end
     redirect_to @user
   end
+  def decline_friendship
+    authorize current_user
+    @friendship = Friendship.find(params[:id])
+    @friendship.destroy!
+    redirect_to current_user
+
+  end
+
 
   def accept_friendship
-    authorize @user
+    authorize current_user
     @friendship = Friendship.find(params[:id])
     @friendship.update(is_accepted: true)
     redirect_to current_user
   end
+
 
   private
 

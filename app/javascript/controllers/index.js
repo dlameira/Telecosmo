@@ -4,5 +4,11 @@
 
 import { application } from "./application"
 
+import ExpanderStoriesController from "./expander_stories_controller"
+application.register("expander-stories", ExpanderStoriesController)
+
+import FriendshipController from "./friendship_controller"
+application.register("friendship", FriendshipController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
