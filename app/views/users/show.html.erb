@@ -32,7 +32,7 @@
         <%= form.button :submit, "Accept Friendship" %>
         <% end %>
 
-        <%= button_to "Decline Friendship", decline_friendship_user_path(f), method: :delete, data: { confirm: "Decline friendship?" } %>
+        <%= button_to "Decline Friendship", decline_friendship_user_path(f), method: :delete %>
 
 
         <% end %>
