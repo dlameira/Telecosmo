@@ -16,6 +16,9 @@ class UserPolicy < ApplicationPolicy
   def accept_friendship?
     true
   end
+  def decline_friendship?
+    true
+  end
 
 
 end

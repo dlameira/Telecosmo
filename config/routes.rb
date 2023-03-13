@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     member do
       post :add_friend
       patch :accept_friendship
+      delete :decline_friendship
+
     end
   end
 
