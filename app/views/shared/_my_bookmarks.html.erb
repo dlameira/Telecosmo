@@ -1,0 +1,13 @@
+<% if current_user.bookmarks.any? %>
+
+  <div class="universe-folder">
+
+      <% current_user.bookmarks.each do |bookmark| %>
+        <%# <%= bookmark.universe.photo.key , class: 'universe-folder-img' %>
+        <h3><%= bookmark.universe.title %></h3>
+        <p><%= bookmark.universe.user.nickname %></p>
+      <% end %>
+
+  </div>
+
+ <% end %>
