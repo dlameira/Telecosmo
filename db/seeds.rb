@@ -10,6 +10,7 @@ tags = ['Action', 'Mystery', 'Comedy', 'Horror', 'Sci-fi', 'Detective', 'Romance
 tags.each do |tag|
   tag1 = Tag.new
   tag1.name = tag
+  tag1.save!
 end
 
 lostinwoods = Universe.new(
