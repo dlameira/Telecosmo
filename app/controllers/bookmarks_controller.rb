@@ -2,9 +2,10 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark = Bookmark.new
-    raise
 
     @universe = Universe.find(bookmark_params[:universe_id])
+    raise
+
     @bookmark.universe = @universe
     @bookmark.user = current_user
     authorize @bookmark
@@ -15,6 +16,6 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmarks).permit(:universe_id)
+    params.require(:bookmark).permit(:universe_id)
   end
 end
