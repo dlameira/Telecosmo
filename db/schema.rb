@@ -52,12 +52,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
   end
 
   create_table "friendships", force: :cascade do |t|
-    t.bigint "asked_id"
+    t.bigint "asker_id"
     t.bigint "receiver_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_accepted", default: false
-    t.index ["asked_id"], name: "index_friendships_on_asked_id"
+    t.index ["asker_id"], name: "index_friendships_on_asker_id"
     t.index ["receiver_id"], name: "index_friendships_on_receiver_id"
   end
 
@@ -139,7 +139,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookmarks", "universes"
   add_foreign_key "bookmarks", "users"
-  add_foreign_key "friendships", "users", column: "asked_id"
+  add_foreign_key "friendships", "users", column: "asker_id"
   add_foreign_key "friendships", "users", column: "receiver_id"
   add_foreign_key "pages", "stories"
   add_foreign_key "stories", "universes"
