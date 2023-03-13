@@ -1,7 +1,7 @@
 User.destroy_all
 Universe.destroy_all
 Story.destroy_all
-Tags.destroy_all
+Tag.destroy_all
 user = User.create!(email: "daniel@telecosmo.com.br", password: "123456", nickname: "Telecosmo", first_name: "Daniel",
                     last_name: "Lameira", birthday: Date.new(1987, 8, 28),
                     bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
