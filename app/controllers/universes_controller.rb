@@ -7,6 +7,7 @@ class UniversesController < ApplicationController
   end
 
   def search
+    @tags = Tag.all
     @universes = Universe.all
     authorize @universes
     if params[:query].present?
