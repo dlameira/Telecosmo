@@ -1,53 +1,59 @@
+<div data-controller="expander-stories" >
 
+  <div class="t-universe-container container">
 
-<div class="t-universe-container container">
+    <div class="t-main-card">
 
-  <div class="t-main-card">
+      <%= image_tag('teste.png', class: "universe-image") %>
 
-    <%= image_tag('teste.png', class: "universe-image") %>
+      <div class="universe-title-description">
+        <h3><%= @universe.title %></h3>
+        <h6><%= @universe.callout %></h6>
+      </div>
 
-    <div class="universe-title-description">
-      <h3><%= @universe.title %></h3>
-      <h6><%= @universe.callout %></h6>
+    </div>
+
+    <div class="card-description" data-expander-stories-target="ucontent">
+        <p><%= @universe.content %></p>
+    </div>
+
+    <div class="icon">
+      <i class="fa-solid fa-share"></i>
+      <i class="fa-solid fa-heart"></i>
     </div>
 
   </div>
 
-  <div class="card-description">
-      <p><%= @universe.content %></p>
-  </div>
-
-  <div class="icon">
-    <i class="fa-solid fa-share"></i>
-    <i class="fa-solid fa-heart"></i>
-  </div>
-
-</div>
 
 
 
 
-
-<% @universe.stories.each do |story| %>
-  <div class="t-card-story container">
-
-    <div>
-      <%= image_tag "teste.png", class:"story-img" %>
-    </div>
-
-    <div class="t-card-story-content">
+  <% @universe.stories.each do |story| %>
+    <div class="t-card-story container" data-action="click->expander-stories#expand" data-expander-stories-target="story">
 
       <div>
-      <h3><%= story.title %></h3>
-      <p><%= story.callout %></p>
+        <%= image_tag "teste.png", class:"story-img" %>
       </div>
 
-      <div class="t-card-story-details">
-        <span class="sticker-tag">Mistery</span>
-        <span><%= story.reading_time %> minutes</span>
+      <div class="t-card-story-content">
+
+        <div>
+        <h3><%= story.title %></h3>
+        <p><%= story.callout %></p>
+        </div>
+
+        <div  class="story-hyde" data-expander-stories-target="scontent">
+          <p><%= story.content %></p>
+        </div>
+
+        <div class="t-card-story-details">
+          <span class="sticker-tag">Mistery</span>
+          <span><%= story.reading_time %> minutes</span>
+        </div>
+
       </div>
 
     </div>
+  <% end %>
 
-  </div>
-<% end %>
+</div>
