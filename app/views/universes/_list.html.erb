@@ -1,0 +1,10 @@
+<div data-search-universes-target="list">
+  <div class="row justify-content-evenly col-12">
+      <% @tags.each_with_index do |tag, index| %>
+        <div class="card-category search-bg-<%= colors[index] %>">
+          <%= image_tag "personagem_perdido.png", width: "60%" %>
+          <h3>Tag.name</h3>
+        </div>
+      <% end %>
+  </div>
+</div>
