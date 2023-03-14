@@ -14,14 +14,19 @@ class UsersController < ApplicationController
     end
     redirect_to @user
   end
+
+  def friends
+    authorize current_user
+    @user = User.find(params[:id])
+    @friendships = Friendship.where("asker_id = ? OR receiver_id = ?", @user.id, @user.id).where(is_accepted: true)
+  end
+
   def decline_friendship
     authorize current_user
     @friendship = Friendship.find(params[:id])
     @friendship.destroy!
     redirect_to current_user
-
   end
-
 
   def accept_friendship
     authorize current_user
@@ -29,7 +34,6 @@ class UsersController < ApplicationController
     @friendship.update(is_accepted: true)
     redirect_to current_user
   end
-
 
   private
 
