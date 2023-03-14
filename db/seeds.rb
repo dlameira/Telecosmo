@@ -2,6 +2,8 @@ User.destroy_all
 Universe.destroy_all
 Story.destroy_all
 Tag.destroy_all
+Friendship.destroy_all
+
 user = User.create!(email: "admin@telecosmo.com.br", password: "123456", nickname: "Telecosmo", first_name: "Mystery",
                     last_name: "Person", birthday: Date.new(1987, 8, 28),
                     bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
@@ -51,33 +53,33 @@ misty = User.create!(email: 'misty@gmail.com', password: '123456', nickname: 'Mi
                      bio: "i put the M in Mon")
 
 
-friendship.create!(asker_id: ash, receiver_id: pikachu, is_accepted: true)
-friendship.create!(asker_id: ash, receiver_id: charmander, is_accepted: true)
-friendship.create!(asker_id: ash, receiver_id: squirtle, is_accepted: true)
-friendship.create!(asker_id: ash, receiver_id: bubassaur, is_accepted: true)
-friendship.create!(asker_id: ash, receiver_id: professor, is_accepted: true)
-friendship.create!(asker_id: ash, receiver_id: brock, is_accepted: true)
-friendship.create!(asker_id: ash, receiver_id: misty, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: charmander.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: squirtle.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: bubassaur.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: professor.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: brock.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: misty.id, is_accepted: true)
 
-friendship.create!(asker_id: bubassaur, receiver_id: pikachu, is_accepted: true)
-friendship.create!(asker_id: squirtle, receiver_id: pikachu, is_accepted: true)
-friendship.create!(asker_id: charmander, receiver_id: pikachu, is_accepted: true)
-friendship.create!(asker_id: professor, receiver_id: pikachu, is_accepted: true)
+Friendship.create!(asker_id: bubassaur.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: squirtle.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: charmander.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: professor.id, receiver_id: pikachu.id, is_accepted: true)
 
-friendship.create!(asker_id: jessie, receiver_id: james, is_accepted: true)
-friendship.create!(asker_id: jessie, receiver_id: professor, is_accepted: true)
-friendship.create!(asker_id: jessie, receiver_id: pikachu, is_accepted: true)
+Friendship.create!(asker_id: jessie.id, receiver_id: james.id, is_accepted: true)
+Friendship.create!(asker_id: jessie.id, receiver_id: professor.id, is_accepted: true)
+Friendship.create!(asker_id: jessie.id, receiver_id: pikachu.id, is_accepted: true)
 
-friendship.create!(asker_id: user, receiver_id: pikachu, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: ash, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: misty, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: squirtle, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: bubassaur, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: charmander, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: professor, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: jessie , is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: james, is_accepted: true)
-friendship.create!(asker_id: user, receiver_id: brock, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: ash.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: misty.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: squirtle.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: bubassaur.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: charmander.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: professor.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: jessie.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: james.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: brock.id, is_accepted: true)
 
 
 
