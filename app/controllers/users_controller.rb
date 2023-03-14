@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     authorize @user
+    @universes = Universe.all
     @pending_friendships = current_user.friendships_as_receiver.where(is_accepted: false)
   end
 
@@ -36,4 +37,3 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 end
-

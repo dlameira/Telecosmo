@@ -2,6 +2,8 @@ User.destroy_all
 Universe.destroy_all
 Story.destroy_all
 Tag.destroy_all
+Friendship.destroy_all
+
 
 user = User.create!(email: "admin@telecosmo.com.br", password: "123456", nickname: "Telecosmo", first_name: "Mystery",
                     last_name: "Person", birthday: Date.new(1987, 8, 28),
@@ -10,6 +12,77 @@ user = User.create!(email: "admin@telecosmo.com.br", password: "123456", nicknam
 User.create!(email: 'pokemon@gmail.com', password: '123456', nickname: 'Pokemon', first_name: 'Pokemon',
                      last_name: 'Silva', birthday: Date.new(1987, 8, 28),
                      bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
+
+pikachu = User.create!(email: 'pikachu@gmail.com', password: '123456', nickname: 'Pika', first_name: 'Pikachu',
+                       last_name: 'Silva', birthday: Date.new(1991, 2, 20),
+                       bio: "pika pika pikaaaaa")
+
+ash = User.create!(email: 'ash@gmail.com', password: '123456', nickname: 'Ashy', first_name: 'Ash',
+                   last_name: 'Ketchum', birthday: Date.new(1991, 2, 20),
+                   bio: "I just want to capture all pokemons in the world!")
+
+brock = User.create!(email: 'brock@gmail.com', password: '123456', nickname: 'brocky', first_name: 'Brock',
+                     last_name: 'Silva', birthday: Date.new(1991, 2, 20),
+                     bio: "I know theres a time that i dont show up")
+
+jessie = User.create!(email: 'jessie@gmail.com', password: '123456', nickname: 'jessie_b4nd1d4', first_name: 'Jessie',
+                      last_name: 'Silva', birthday: Date.new(1991, 2, 20),
+                      bio: "Ash, mind your pokemons")
+
+james = User.create!(email: 'james@gmail.com', password: '123456', nickname: 'jami4', first_name: 'Jamie',
+                     last_name: 'Silva', birthday: Date.new(1991, 2, 20),
+                     bio: "me and my partner are the ones")
+
+professor = User.create!(email: 'carvalho@gmail.com', password: '123456', nickname: 'profCarvalho', first_name: 'Professor',
+                         last_name: 'Carvalho', birthday: Date.new(1991, 2, 20),
+                         bio: "Professor, but with no diploma")
+
+charmander = User.create!(email: 'charmander@gmail.com', password: '123456', nickname: 'LittleFire', first_name: 'Charmander',
+                          last_name: 'Baby', birthday: Date.new(1991, 2, 20),
+                          bio: "theres fire in my tail")
+
+bubassaur = User.create!(email: 'bubassaur@gmail.com', password: '123456', nickname: 'Buba', first_name: 'Bubassaur',
+                         last_name: 'Santos', birthday: Date.new(1991, 2, 20),
+                         bio: "please put some water")
+
+squirtle = User.create!(email: 'squirtle@gmail.com', password: '123456', nickname: 'Squirty', first_name: 'Squirtle',
+                        last_name: 'Santos', birthday: Date.new(1991, 2, 20),
+                        bio: "not the owner of CEDAE")
+
+misty = User.create!(email: 'misty@gmail.com', password: '123456', nickname: 'Mistyc', first_name: 'Misty',
+                     last_name: 'Maria', birthday: Date.new(1991, 2, 20),
+                     bio: "i put the M in Mon")
+
+
+Friendship.create!(asker_id: ash.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: charmander.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: squirtle.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: bubassaur.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: professor.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: brock.id, is_accepted: true)
+Friendship.create!(asker_id: ash.id, receiver_id: misty.id, is_accepted: true)
+
+Friendship.create!(asker_id: bubassaur.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: squirtle.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: charmander.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: professor.id, receiver_id: pikachu.id, is_accepted: true)
+
+Friendship.create!(asker_id: jessie.id, receiver_id: james.id, is_accepted: true)
+Friendship.create!(asker_id: jessie.id, receiver_id: professor.id, is_accepted: true)
+Friendship.create!(asker_id: jessie.id, receiver_id: pikachu.id, is_accepted: true)
+
+Friendship.create!(asker_id: user.id, receiver_id: pikachu.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: ash.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: misty.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: squirtle.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: bubassaur.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: charmander.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: professor.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: jessie.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: james.id, is_accepted: true)
+Friendship.create!(asker_id: user.id, receiver_id: brock.id, is_accepted: true)
+
+
 
 tags = ['Action', 'Mystery', 'Comedy', 'Horror', 'Sci-fi', 'Detective', 'Romance', 'Drama', 'Adventure', 'Fantasy']
 tags.each do |tag|
