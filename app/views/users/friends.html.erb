@@ -1,0 +1,7 @@
+<% @friendships.each do |f|  %>
+  <% if @user == f.asker %>
+    <%= f.receiver.nickname%>
+    <%elsif @user == f.receiver %>
+    <%= f.asker.nickname%>
+  <%end%>
+<%end%>

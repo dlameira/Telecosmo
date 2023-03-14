@@ -13,10 +13,16 @@ class UserPolicy < ApplicationPolicy
   def add_friend?
     true
   end
+
   def accept_friendship?
     true
   end
+
   def decline_friendship?
+    true
+  end
+
+  def friends?
     true
   end
 

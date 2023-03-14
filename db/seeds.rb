@@ -4,7 +4,6 @@ Story.destroy_all
 Tag.destroy_all
 Friendship.destroy_all
 
-
 user = User.create!(email: "admin@telecosmo.com.br", password: "123456", nickname: "Telecosmo", first_name: "Mystery",
                     last_name: "Person", birthday: Date.new(1987, 8, 28),
                     bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
