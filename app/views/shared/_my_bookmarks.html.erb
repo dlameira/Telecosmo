@@ -1,10 +1,12 @@
 <% if user_signed_in? %>
-  <div class="universe-folder">
+  <div class="wrapper">
 
       <% current_user.bookmarks.each do |bookmark| %>
-        <%# <%= bookmark.universe.photo.key , class: 'universe-folder-img' %>
-        <h3><%= bookmark.universe.title %></h3>
-        <p><%= bookmark.universe.user.nickname %></p>
+        <div class="universe-folder">
+          <%= image_tag bookmark.universe.thumb_url, class: 'universe-folder-img'%>
+          <h3><%= bookmark.universe.title %></h3>
+          <p><%= bookmark.universe.user.nickname %></p>
+        </div>
       <% end %>
 
   </div>
