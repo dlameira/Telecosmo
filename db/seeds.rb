@@ -4,11 +4,12 @@ Story.destroy_all
 Tag.destroy_all
 Friendship.destroy_all
 
+
 user = User.create!(email: "admin@telecosmo.com.br", password: "123456", nickname: "Telecosmo", first_name: "Mystery",
                     last_name: "Person", birthday: Date.new(1987, 8, 28),
                     bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
 
-user2 = User.create!(email: 'pokemon@gmail.com', password: '123456', nickname: 'Pokemon', first_name: 'Pokemon',
+User.create!(email: 'pokemon@gmail.com', password: '123456', nickname: 'Pokemon', first_name: 'Pokemon',
                      last_name: 'Silva', birthday: Date.new(1987, 8, 28),
                      bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
 
@@ -113,7 +114,8 @@ lostinwoods = Universe.new(
   story = Story.new(
     edition_number: 2,
     title: 'A shadow in the night',
-    callout: 'A walkie-talkie buzzes in the rain, interrupting Sam and Max\'s conversation. Suddenly, a blue streak of light illuminates the sky, and the device explodes in a shower of sparks. Frightened but curious, the boys set out to investigate the strange phenomenon, following the trail deeper into the woods.',
+    callout: 'Lightning and thunders!',
+    content: 'A walkie-talkie buzzes in the rain, interrupting Sam and Max\'s conversation. Suddenly, a blue streak of light illuminates the sky, and the device explodes in a shower of sparks. Frightened but curious, the boys set out to investigate the strange phenomenon, following the trail deeper into the woods.',
     reading_time: (5..20).to_a.sample,
     thumb_url: "https://res.cloudinary.com/djkudqafd/image/upload/v1678479805/PERDIDOS_NA_FLORESTA_02_cave_pu8sod.png"
   )
@@ -123,7 +125,8 @@ lostinwoods = Universe.new(
   story = Story.new(
     edition_number: 3,
     title: 'Another dimension',
-    callout: 'The portal was colorful and bright, and Sam and Max couldn\'t imagine what would emerge from it. As they drew closer, a sense of unease settled over them. They had no idea what lay on the other side, but they knew it couldn\'t be good. Suddenly, a figure stepped out of the portal, and the boys gasped in astonishment.',
+    callout: 'Never trust a creature from another dimension',
+    content: 'The portal was colorful and bright, and Sam and Max couldn\'t imagine what would emerge from it. As they drew closer, a sense of unease settled over them. They had no idea what lay on the other side, but they knew it couldn\'t be good. Suddenly, a figure stepped out of the portal, and the boys gasped in astonishment.',
     reading_time: (5..20).to_a.sample,
     thumb_url: "https://res.cloudinary.com/djkudqafd/image/upload/v1678655906/PERDIDOS_04_vn1ufh.png"
   )
@@ -388,11 +391,11 @@ spidercastle = Universe.new(
   story.save!
 
 ninjamustache = Universe.new(
-    title: 'Ninja Mustache',
-    callout: 'Skating through the shadows!',
-    content: 'No one had an idea about who could be Ninja Mustache, the person who used a katana to keep the town safe from the wide range of creatures that insist on appearing',
-    thumb_url: "https://res.cloudinary.com/djkudqafd/image/upload/v1678657765/bigode_000_ganpa3.png"
-      )
+  title: 'Ninja Mustache',
+  callout: 'Skating through the shadows!',
+  content: 'No one had an idea about who could be Ninja Mustache, the person who used a katana to keep the town safe from the wide range of creatures that insist on appearing',
+  thumb_url: "https://res.cloudinary.com/djkudqafd/image/upload/v1678657765/bigode_000_ganpa3.png"
+    )
     ninjamustache.user = user
     ninjamustache.save!
 
