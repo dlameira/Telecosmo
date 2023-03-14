@@ -18,15 +18,17 @@
 
 .search-bg-green {
   background-color: #86FF31;
-  color: black;
+  color: #0E1013;
 }
 
 .search-bg-yellow {
   background-color: #FAAA39;
+  color: #0E1013;
 }
 
 .search-bg-blue {
   background-color: #57CFDF;
+  color: #0E1013;
 }
 
 .search-bg-grey {
@@ -35,10 +37,12 @@
 
 .search-bg-lightgrey {
   background-color: #BCBFC3;
+  color: #0E1013;
 }
 
 .search-bg-darkblue {
   background-color: #1B84C2;
+  color: #0E1013;
 }
 
 .search-bg-purple {
@@ -47,26 +51,16 @@
 
 .search-bg-white {
   background-color: #FFF3DC;
+  color: #0E1013;
 }
 
 .search-bg-red {
   background-color: #EF1741;
 }
 
-$f1: #FF533F;
-$f2: #EF1741;
-$f3: #A51040;
-$f4: #BD382B;
-$f5: #FAAA39;
-$f6: #EF1741;
-$f7: #C9DE3E;
-$f8: #86FF31;
-$f9: #267B2F;
-$f10: #2B5071;
-$f11: #1B84C2;
-$f12: #57CFDF;
-$f13: #5F5FEC;
-$f14: #7993F6;
-$f15: #F65599;
-$f16: #FF8B97;
-$f17: #FFF3DC;
+.universe_search {
+  background-color: #FFF3DC;
+  border-radius: 21px;
+  width: 365px;
+  height: 65px;
+}
