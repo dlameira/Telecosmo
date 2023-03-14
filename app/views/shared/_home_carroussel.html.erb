@@ -5,31 +5,41 @@
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
 
-      <%= image_tag 'https://res.cloudinary.com/djkudqafd/image/upload/v1678738944/PERDIDOS_NA_FLORESTA_02_AUDIBLE_celbrp.png', class: "d-block w-100" %>
+    <%=link_to universe_path(Universe.find_by(title: 'Lost in Woods')) do %>
+      <div class="carousel-item active">
 
-      <div class="carousel-caption pb-0 text-start ms-3">
-        <h5 class="mb-0">New episode</h5>
-        <p class="mb-0">Enter in the mysterious cave</p>
+        <%= image_tag 'https://res.cloudinary.com/djkudqafd/image/upload/v1678738944/PERDIDOS_NA_FLORESTA_02_AUDIBLE_celbrp.png', class: "d-block w-100" %>
+
+        <div class="carousel-caption pb-0 text-start ms-3">
+          <h5 class="mb-0">New episode</h5>
+          <p class="mb-0">Enter in the mysterious cave</p>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'https://res.cloudinary.com/djkudqafd/image/upload/v1678738851/neoftypetw_gn6tp6.png', class: "d-block w-100" %>
-      <div class="carousel-caption pb-0 text-start ms-3">
-        <h5 class="mb-0">New episode</h5>
-        <p class="mb-0">Travel through time</p>
-      </div>
-    </div>
-    <div class="carousel-item">
+    <%end%>
 
-      <%= image_tag 'https://res.cloudinary.com/djkudqafd/image/upload/v1678738944/PERDIDOS_NA_FLORESTA_02_AUDIBLE_celbrp.png', class: "d-block w-100" %>
 
-      <div class="carousel-caption pb-0 text-start ms-3">
-        <h5 class="mb-0">New episode</h5>
-        <p class="mb-0">Enter in the mysterious cave</p>
+    <%=link_to universe_path(Universe.find_by(title: 'Not another costume')) do %>
+      <div class="carousel-item">
+        <%= image_tag 'https://res.cloudinary.com/djkudqafd/image/upload/v1678738851/neoftypetw_gn6tp6.png', class: "d-block w-100" %>
+        <div class="carousel-caption pb-0 text-start ms-3">
+          <h5 class="mb-0">New episode</h5>
+          <p class="mb-0">Travel through time</p>
+        </div>
       </div>
-    </div>
+    <%end%>
+
+
+    <%=link_to universe_path(Universe.find_by(title: 'Lost in Woods')) do %>
+      <div class="carousel-item">
+        <%= image_tag 'https://res.cloudinary.com/djkudqafd/image/upload/v1678738944/PERDIDOS_NA_FLORESTA_02_AUDIBLE_celbrp.png', class: "d-block w-100" %>
+        <div class="carousel-caption pb-0 text-start ms-3">
+          <h5 class="mb-0">New episode</h5>
+          <p class="mb-0">Enter in the mysterious cave</p>
+        </div>
+      </div>
+    <%end%>
+
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
