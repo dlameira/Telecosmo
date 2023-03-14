@@ -21,9 +21,17 @@
   <div class="profile-container-card" >
     <div class="profile-content">
       <h3>friends</h3>
-      <% if current_user != @user %>
+        <% if current_user != @user %>
+        <% friendship_request = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: false) %>
+        <% friendship_accepted = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: true) %>
+        <% if friendship_request %>
+        <%= "Friendship request sent" %>
+        <% elsif friendship_accepted %>
+        <%= "#{friendship_accepted.receiver.nickname} is already your friend" %>
+        <% else %>
         <%= button_to "Add as a friend", add_friend_user_path(@user), method: :post %>
-       <% end %>
+        <% end %>
+        <% end %>
 
         <%@pending_friendships.each do |f|%>
         <%= "#{f.asker.nickname} wants to be your friend" %>
@@ -31,10 +39,6 @@
         <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
         <%= form.button :submit, "Accept Friendship" %>
         <% end %>
-
-        <%= button_to "Decline Friendship", decline_friendship_user_path(f), method: :delete %>
-
-
         <% end %>
 
 
