@@ -2,10 +2,12 @@
   <% if params[:query].present? %>
   <div class="row justify-content-evenly">
       <% @universes.each do |universe| %>
-        <div class="card-category">
-          <%= image_tag universe.thumb_url, width: "60%" %>
-          <h3><%= universe.title %></h3>
-        </div>
+        <%= link_to universe_path(universe), class: "universe-card col-6 my-3" do %>
+          <div class="card-category">
+            <%= image_tag universe.thumb_url, width: "60%" %>
+            <h3><%= universe.title%></h3>
+          </div>
+        <% end %>
       <% end %>
   </div>
   <% else %>
