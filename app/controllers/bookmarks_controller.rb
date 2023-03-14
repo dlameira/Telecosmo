@@ -12,14 +12,18 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    @bookmark = Bookmark.find(params)
+
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+
+
+    redirect_to universe_path(bookmark_params)
     raise
   end
 
   private
 
   def bookmark_params
-
     params.require(:bookmarks).permit(:universe_id)
   end
 end
