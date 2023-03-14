@@ -21,7 +21,7 @@
   <div class="profile-container-card" >
     <div class="profile-content">
       <h3>friends</h3>
-              <% if current_user != @user %>
+        <% if current_user != @user %>
         <% friendship_request = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: false) %>
         <% friendship_accepted = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: true) %>
         <% if friendship_request %>
@@ -48,7 +48,14 @@
 
 
 
-      <p>13</p>
+
+
+
+
+
+
+      <p><% total_friendships = Friendship.where("asker_id = ? OR receiver_id = ?", @user.id, @user.id).where(is_accepted: true).count%></p>
+      <p><%= total_friendships%>
     </div>
 
     <div class="profile-content">
