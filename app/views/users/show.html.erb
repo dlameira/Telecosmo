@@ -21,42 +21,11 @@
   <div class="profile-container-card" >
     <div class="profile-content">
       <h3>friends</h3>
-        <% if current_user != @user %>
-        <% friendship_request = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: false) %>
-        <% friendship_accepted = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: true) %>
-        <% if friendship_request %>
-        <%= "Friendship request sent" %>
-        <% elsif friendship_accepted %>
-        <%= "#{friendship_accepted.receiver.nickname} is already your friend" %>
-        <% else %>
-        <%= button_to "Add as a friend", add_friend_user_path(@user), method: :post %>
-        <% end %>
-        <% end %>
-
-        <%@pending_friendships.each do |f|%>
-        <%= "#{f.asker.nickname} wants to be your friend" %>
-        <%= simple_form_for f, url:  accept_friendship_user_path(f) do |form| %>
-        <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
-        <%= form.button :submit, "Accept Friendship" %>
-        <% end %>
-        <%= button_to "Decline Friendship", decline_friendship_user_path(f), method: :delete %>
-        <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
 
       <p><% total_friendships = Friendship.where("asker_id = ? OR receiver_id = ?", @user.id, @user.id).where(is_accepted: true).count%></p>
       <p><%= total_friendships%>
     </div>
+
 
     <div class="profile-content">
       <h3>favs</h3>
@@ -75,6 +44,31 @@
 
   <div class="d-flex justify-content-around">
 
+        <div>
+
+        <% if current_user != @user %>
+        <% friendship_request = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: false) %>
+        <% friendship_accepted = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: true) %>
+        <% if friendship_request %>
+        <%= "Friendship request sent" %>
+        <% elsif friendship_accepted %>
+        <%= "#{friendship_accepted.receiver.nickname} is already your friend" %>
+        <% else %>
+        <%= button_to "Follow", add_friend_user_path(@user),class:'button-one', method: :post %>
+        <% end %>
+        <% end %>
+
+
+        <%@pending_friendships.each do |f|%>
+        <%= "#{f.asker.nickname} wants to be your friend" %>
+        <%= simple_form_for f, url:  accept_friendship_user_path(f) do |form| %>
+        <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
+        <%= form.button :submit, "Accept",class:'button-two' %>
+        <% end %>
+        <%= button_to "Decline", decline_friendship_user_path(f),class:'button-one', method: :delete %>
+        <% end %>
+
+        </div>
 
     <div class="button-two">
     mensagem
