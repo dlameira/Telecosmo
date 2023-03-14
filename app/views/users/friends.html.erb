@@ -1,7 +1,17 @@
-<% @friendships.each do |f|  %>
-  <% if @user == f.asker %>
-    <%= f.receiver.nickname%>
-    <%elsif @user == f.receiver %>
-    <%= f.asker.nickname%>
+<div class="container m-3">
+  <% @friendships.each do |f|  %>
+      <div class="row justify-content-center mb-2 text-decoration-none">
+        <% if @user == f.asker %>
+          <%=link_to(user_path(f.receiver)) do%>
+            <%= f.receiver.nickname%>
+          <%end%>
+
+        <%elsif @user == f.receiver %>
+          <%=link_to(user_path(f.asker)) do%>
+            <%= f.asker.nickname%>
+        <%end%>
+      </div>
+    <%end%>
   <%end%>
-<%end%>
+
+</div>

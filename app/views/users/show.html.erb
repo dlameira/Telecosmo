@@ -19,12 +19,14 @@
   </div>
 
   <div class="profile-container-card" >
-    <div class="profile-content">
-      <h3>friends</h3>
+    <%= link_to(friends_user_path(@user)) do %>
+      <div class="profile-content">
+        <h3>friends</h3>
 
-      <p><% total_friendships = Friendship.where("asker_id = ? OR receiver_id = ?", @user.id, @user.id).where(is_accepted: true).count%></p>
-      <p><%= total_friendships%>
-    </div>
+        <p><% total_friendships = Friendship.where("asker_id = ? OR receiver_id = ?", @user.id, @user.id).where(is_accepted: true).count%></p>
+        <p><%= total_friendships%>
+      </div>
+    <%end%>
 
 
     <div class="profile-content">
