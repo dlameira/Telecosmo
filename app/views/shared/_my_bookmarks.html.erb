@@ -1,4 +1,4 @@
-
+<% if user_signed_in? %>
   <div class="universe-folder">
 
       <% current_user.bookmarks.each do |bookmark| %>
@@ -8,3 +8,4 @@
       <% end %>
 
   </div>
+<% end %>
