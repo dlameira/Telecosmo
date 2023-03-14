@@ -1,5 +1,15 @@
 <div data-search-universes-target="list">
-  <div class="row justify-content-evenly col-12">
+  <% if params[:query].present? %>
+  <div class="row justify-content-evenly">
+      <% @universes.each do |universe| %>
+        <div class="card-category">
+          <%= image_tag universe.thumb_url, width: "60%" %>
+          <h3><%= universe.title %></h3>
+        </div>
+      <% end %>
+  </div>
+  <% else %>
+  <div class="row justify-content-evenly">
       <% @tags.each_with_index do |tag, index| %>
         <div class="card-category search-bg-<%= colors[index] %>">
           <%= image_tag "personagem_perdido.png", width: "60%" %>
@@ -7,4 +17,5 @@
         </div>
       <% end %>
   </div>
+  <% end %>
 </div>
