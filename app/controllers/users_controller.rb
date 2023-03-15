@@ -28,6 +28,18 @@ class UsersController < ApplicationController
     redirect_to current_user
   end
 
+  def delete_friendship
+    authorize current_user
+    @friendship = Friendship.find_by(id: params[:id], is_accepted: true)
+    @friendship.destroy!
+    redirect_to current_user
+  end
+
+
+
+
+
+
   def accept_friendship
     authorize current_user
     @friendship = Friendship.find(params[:id])
