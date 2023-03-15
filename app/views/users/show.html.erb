@@ -74,7 +74,8 @@
 
     </div>
 
-   <div class="button-two"> <%= link_to "message", chatrooms_path, method: :post %></div>
+   <div class="button-two"> </div>
+   <%= button_to "message", user_chatrooms_path(@user), method: :post, class: 'button-two' %>
 
   </div>
 
