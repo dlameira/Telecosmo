@@ -9,6 +9,7 @@ class FriendshipsController < ApplicationController
     redirect_to current_user
   end
 
+
   private
 
   def friendship_params
