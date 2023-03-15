@@ -1,0 +1,29 @@
+.one {
+  position: fixed;
+  z-index: 3;
+  overflow: hidden;
+
+
+}
+
+.two {
+  position: fixed;
+  z-index: 2;
+  overflow: hidden;
+
+
+}
+
+
+.three {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+
+
+
+}
+
+.hideslide {
+  opacity: 0;
+}

@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:create, :destroy]
   end
 
+  resources :stories, only: [:show]
+
+  resources :pages, only: [:show]
+
   resources :tags, only: [:index]
 
   resources :users, only: [:show] do
