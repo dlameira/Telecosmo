@@ -4,6 +4,8 @@ class UniversesController < ApplicationController
     authorize @universe
     @bookmark = Bookmark.new
     authorize @bookmark
+    @story = Story.find(params[:id])
+    authorize @story
   end
 
   def search

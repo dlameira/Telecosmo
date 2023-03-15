@@ -81,6 +81,8 @@ Friendship.create!(asker_id: user.id, receiver_id: jessie.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: james.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: brock.id, is_accepted: true)
 
+StoryTags.create!(tag_id: 1, story_id: 1)
+
 
 
 tags = ['Action', 'Mystery', 'Comedy', 'Horror', 'Sci-fi', 'Detective', 'Romance', 'Drama', 'Adventure', 'Fantasy']

@@ -1,0 +1,20 @@
+<div class="container d-flex" data-controller="pages" data-action="click->pages#turn">
+  <div class="one" data-pages-target="one"  >
+    <div>
+
+        <h1 class="text-center"><%=@story.universe.title%></h1>
+        <p class="text-center"><%=@story.title%></p>
+
+    </div>
+  </div>
+
+
+  <div class="two" data-pages-target="closeddoor" >
+    <%= image_tag "https://res.cloudinary.com/djkudqafd/image/upload/v1678888042/door1_afp50g.png"%>
+  </div>
+
+
+  <div  class="three d-none" data-pages-target="opendoor">
+    <%= image_tag "https://res.cloudinary.com/djkudqafd/image/upload/v1678888043/door2_eelfzh.png"%>
+  </div>
+</div>
