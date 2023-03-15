@@ -71,7 +71,7 @@ Friendship.create!(asker_id: jessie.id, receiver_id: professor.id, is_accepted: 
 Friendship.create!(asker_id: jessie.id, receiver_id: pikachu.id, is_accepted: true)
 
 Friendship.create!(asker_id: user.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.niackname}")
+Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.nickname}")
 Friendship.create!(asker_id: user.id, receiver_id: ash.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: misty.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: squirtle.id, is_accepted: true)
