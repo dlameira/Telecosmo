@@ -1,6 +1,7 @@
-<div data-controller="search-universes">
+<div data-controller="search-universes" class="container ">
+
   <%= form_with url: search_path, method: :get, html: {class:
-    "m-4", data: {search_universes_target: "form"}} do |f| %>
+    "my-3", data: {search_universes_target: "form"}} do |f| %>
     <%= f.text_field :query,
                      class: "form-control universe_search",
                      placeholder: "What are you looking for?",
@@ -11,4 +12,5 @@
   <% end %>
 
   <%= render 'universes/list', universes: @universes, colors: @colors %>
+
 </div>
