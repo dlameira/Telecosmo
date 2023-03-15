@@ -26,5 +26,9 @@ class UserPolicy < ApplicationPolicy
     true
   end
 
+  def delete_friendship?
+  true
+  end
+
 
 end

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       patch :accept_friendship
       delete :decline_friendship
       get :friends
+      delete :delete_friendship
     end
   end
 end

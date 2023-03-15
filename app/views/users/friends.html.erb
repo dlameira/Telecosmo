@@ -3,13 +3,21 @@
     <div class="row justify-content-center mb-2">
       <% if @user == f.asker %>
         <%=link_to(user_path(f.receiver)) do%>
-          <%= f.receiver.nickname%>
+          <div class="d-flex justify-content-between">
+          <%= f.receiver.nickname %>
         <%end%>
+           <%= button_to "Delete", delete_friendship_user_path(f), method: :delete %>
+        </div>
+
 
       <%elsif @user == f.receiver %>
         <%=link_to(user_path(f.asker)) do%>
+        <div class="d-flex justify-content-between">
           <%= f.asker.nickname%>
         <%end%>
+          <%= button_to "Delete", delete_friendship_user_path(f), method: :delete %>
+          </div>
+
       <%end%>
     </div>
   <%end%>
