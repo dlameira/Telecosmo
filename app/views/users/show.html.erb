@@ -1,11 +1,14 @@
 <div>
-  <div class="container m-3 d-flex">
+
+  <div class="container my-4 d-flex">
+
     <div>
       <%= image_tag("https://res.cloudinary.com/djkudqafd/image/upload/dl_100/e_loop:0/Mayara_Turn_2_suniki.gif",
       height: 200, crop: :fill) %>
     </div>
 
     <div class="container align-items-center pe-5">
+
       <div class="row">
         <p class="fw-bold fs-4 mb-1 pb-0 mt-4">I'm</p>
         <h1 class="fs-1 mt-0 pt-0"><%=@user.nickname%></h1>
@@ -16,6 +19,7 @@
       </div>
 
     </div>
+
   </div>
 
   <div class="profile-container-card" >
@@ -39,53 +43,53 @@
       <p>1</p>
     </div>
 
-
   </div>
 
 
 
   <div class="d-flex justify-content-around">
 
-        <div>
+    <div>
 
-        <% if current_user != @user %>
+      <% if current_user != @user %>
         <% friendship_request = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: false) %>
         <% friendship_accepted = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: true) %>
         <% if friendship_request %>
-        <%= "Friendship request sent" %>
+          <%= "Friendship request sent" %>
         <% elsif friendship_accepted %>
-        <%= "#{friendship_accepted.receiver.nickname} is already your friend" %>
+          <%= "#{friendship_accepted.receiver.nickname} is already your friend" %>
         <% else %>
-        <%= button_to "Follow", add_friend_user_path(@user),class:'button-one', method: :post %>
+          <%= button_to "Follow", add_friend_user_path(@user),class:'button-one', method: :post %>
         <% end %>
-        <% end %>
+      <% end %>
 
-
-        <%@pending_friendships.each do |f|%>
+      <%@pending_friendships.each do |f|%>
         <%= "#{f.asker.nickname} wants to be your friend" %>
         <%= simple_form_for f, url:  accept_friendship_user_path(f) do |form| %>
-        <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
-        <%= form.button :submit, "Accept",class:'button-two' %>
+          <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
+          <%= form.button :submit, "Accept",class:'button-two' %>
         <% end %>
         <%= button_to "Decline", decline_friendship_user_path(f),class:'button-one', method: :delete %>
-        <% end %>
+      <% end %>
 
-        </div>
-
-    <div class="button-two">
-    mensagem
     </div>
+
+    <div class="button-two"> mensagem </div>
+
   </div>
-    <div class="mt-4">
-      <div class="m-3">
-        <h3 class="home-categories-titles">My favorite universes</h3>
-        <%= render 'shared/home_content' %>
-      </div>
 
-      <div class="m-3">
-        <h3 class="home-categories-titles">Last reads</h3>
-        <%= render 'shared/home_content' %>
-      </div>
+  <div class="mt-4">
+
+    <div class="m-3">
+      <h3 class="home-categories-titles">My favorite universes</h3>
+      <%= render 'shared/home_content' %>
     </div>
+
+    <div class="m-3">
+      <h3 class="home-categories-titles">Last reads</h3>
+      <%= render 'shared/home_content' %>
+    </div>
+
+  </div>
 
 </div>
