@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:index]
 
   resources :users, only: [:show] do
+    resources :chatrooms, only: [:create]
     member do
       post :add_friend
       patch :accept_friendship
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :chatrooms, only: [:show, :create] do
+  resources :chatrooms, only: [:show] do
     resources :messages, only: [:create]
   end
 
