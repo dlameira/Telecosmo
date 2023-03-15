@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/create'
   devise_for :users
   root to: "pages#home"
 
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :tags, only: [:index]
+
   resources :users, only: [:show] do
     member do
       post :add_friend
@@ -16,4 +18,9 @@ Rails.application.routes.draw do
       get :friends
     end
   end
+
+  resources :chatroom, only: [:show] do
+    resources :messages, only: [:create]
+  end
+
 end

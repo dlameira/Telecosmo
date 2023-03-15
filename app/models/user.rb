@@ -7,5 +7,6 @@ class User < ApplicationRecord
   has_many :friendships_as_receiver, class_name: "Friendship", foreign_key: :receiver_id, dependent: :destroy
   has_many :bookmarks, dependent: :destroy
   has_many :universes, dependent: :destroy
+  has_many :messages
 
 end

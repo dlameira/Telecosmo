@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_15_144528) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.bigint "sender_id"
+    t.bigint "recipient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipient_id"], name: "index_chatrooms_on_recipient_id"
+    t.index ["sender_id"], name: "index_chatrooms_on_sender_id"
+  end
+
   create_table "friendships", force: :cascade do |t|
     t.bigint "asker_id"
     t.bigint "receiver_id"
@@ -59,6 +69,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
     t.boolean "is_accepted", default: false
     t.index ["asker_id"], name: "index_friendships_on_asker_id"
     t.index ["receiver_id"], name: "index_friendships_on_receiver_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.bigint "chatroom_id", null: false
+    t.boolean "read", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "pages", force: :cascade do |t|
@@ -139,8 +160,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_134245) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookmarks", "universes"
   add_foreign_key "bookmarks", "users"
+  add_foreign_key "chatrooms", "users", column: "recipient_id"
+  add_foreign_key "chatrooms", "users", column: "sender_id"
   add_foreign_key "friendships", "users", column: "asker_id"
   add_foreign_key "friendships", "users", column: "receiver_id"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "pages", "stories"
   add_foreign_key "stories", "universes"
   add_foreign_key "story_tags", "stories"
