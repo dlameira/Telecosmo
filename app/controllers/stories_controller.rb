@@ -1,8 +1,8 @@
 class StoriesController < ApplicationController
 
   def show
-    @universe = Universe.find(params[:id])
     @story = Story.find(params[:id])
+    @universe = @story.universe
     authorize @story
   end
 end

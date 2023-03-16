@@ -1,19 +1,24 @@
-<div class="container d-flex" data-controller="pages" data-action="click->pages#turn">
-  <div class="one" data-pages-target="title">
-    <div>
+<div class="container d-flex min-vw-100 min-vh-100 vw-100 vh-100 justify-content-center align-items-center" data-controller="pages" >
 
-        <h1 class="text-center"><%=@story.universe.title%></h1>
-        <p class="text-center"><%=@story.title%></p>
-
-    </div>
+  <div class="curtain bg-black vw-100 vh-100" data-pages-target="black" data-action="">
   </div>
 
-  <div class="two" data-pages-target="closeddoor" >
+  <div class="one align-self-center" data-pages-target="title" data-action="click->pages#fadein">
+    <h1 class="text-center "><%=@story.universe.title%></h1>
+    <p class="text-center"><%=@story.title%></p>
+  </div>
+
+  <div class="two d-none" data-pages-target="closeddoor" data-action="click->pages#turn" >
     <%= image_tag "https://res.cloudinary.com/djkudqafd/image/upload/v1678888042/door1_afp50g.png"%>
   </div>
 
-
-  <div  class="three d-none" data-pages-target="opendoor">
+  <div  class="three d-none" data-pages-target="opendoor" data-action="click->pages#scale" >
     <%= image_tag "https://res.cloudinary.com/djkudqafd/image/upload/v1678888043/door2_eelfzh.png"%>
+  </div>
+
+  <div class="four ">
+    <p>
+    I had just arrived from school and I quickly noticed that was something wrong at home.
+    </p>
   </div>
 </div>

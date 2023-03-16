@@ -82,6 +82,7 @@ Friendship.create!(asker_id: user.id, receiver_id: jessie.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: james.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: brock.id, is_accepted: true)
 
+
 tags = ['Action', 'Mystery', 'Comedy', 'Horror', 'Sci-fi', 'Detective', 'Romance', 'Drama', 'Adventure', 'Fantasy']
 tags.each do |tag|
   tag1 = Tag.new
