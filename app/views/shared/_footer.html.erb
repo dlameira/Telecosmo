@@ -2,9 +2,10 @@
   <%= link_to root_path do %>
     <i class="fas fa-home"></i>
   <% end %>
-  <%= link_to  friends_user_path(current_user) do %>
-      <i class="fas fa-users"></i>
+  <%= link_to(friends_user_path(current_user), class: "icon-link") do %>
+  <i class="fas fa-users"></i>
     <% end %>
+
 
   <%= link_to search_path do %>
     <i class="fas fa-search"></i>
