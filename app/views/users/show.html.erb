@@ -76,8 +76,8 @@
 
 
   <% if Friendship.exists?(asker_id: current_user.id, receiver_id: @user.id, is_accepted: true) || Friendship.exists?(asker_id: @user.id, receiver_id: current_user.id, is_accepted: true) %>
-  <%= button_to "message", user_chatrooms_path(@user), method: :post, class: 'button-two' %>
-<% end %>
+    <%= button_to "message", user_chatrooms_path(@user), method: :post, class: 'button-two', params: { authenticity_token: form_authenticity_token } %>
+  <% end %>
 
   </div>
 
