@@ -1,0 +1,16 @@
+.avatar-container{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.user-avatar{
+  height: 200px;
+  width: 200px;
+  background-color: #303636;
+  border-radius: 10px;
+  padding: 10px;
+}

@@ -48,6 +48,7 @@ class UsersController < ApplicationController
     redirect_to current_user
   end
 
+
   private
 
   def set_user

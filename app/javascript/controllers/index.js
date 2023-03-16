@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AvatarController from "./avatar_controller"
+application.register("avatar", AvatarController)
+
 import ExpanderStoriesController from "./expander_stories_controller"
 application.register("expander-stories", ExpanderStoriesController)
 
