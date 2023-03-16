@@ -74,10 +74,10 @@
 
     </div>
 
-  >
-  <% if Friendship.exists?(asker_id: current_user.id, receiver_id: @user.id) || Friendship.exists?(asker_id: @user.id, receiver_id: current_user.id) %>
+
+  <% if Friendship.exists?(asker_id: current_user.id, receiver_id: @user.id, is_accepted: true) || Friendship.exists?(asker_id: @user.id, receiver_id: current_user.id, is_accepted: true) %>
   <%= button_to "message", user_chatrooms_path(@user), method: :post, class: 'button-two' %>
-  <% end %>
+<% end %>
 
   </div>
 
