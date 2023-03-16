@@ -2,8 +2,7 @@
   position: fixed;
   z-index: 3;
   overflow: hidden;
-
-
+  transition: 1s;
 }
 
 .two {
@@ -11,9 +10,7 @@
   z-index: 2;
   overflow: hidden;
 
-
 }
-
 
 .three {
   position: fixed;
@@ -21,6 +18,14 @@
   overflow: hidden;
 
 
+}
+
+.threescaled {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  scale: 20;
+  transition: 10s;
 
 }
 
