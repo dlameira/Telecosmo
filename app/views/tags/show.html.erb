@@ -1,0 +1,8 @@
+<div class="container">
+  <% @stories.each do |story| %>
+    <div class="t-card-story">
+      <p><%= story.title %></p>
+      <%= image_tag "personagem_perdido.png", width: "40%" %>
+    </div>
+  <% end %>
+</div>

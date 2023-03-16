@@ -21,7 +21,7 @@ class UniversesController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.text { render partial: "universes/list", locals: {universes: @universes, colors: @colors}, formats: [:html] }
+      format.text { render partial: "universes/list", locals: { universes: @universes, colors: @colors }, formats: [:html] }
     end
   end
 end

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :pages, only: [:show]
 
-  resources :tags, only: [:index]
+  resources :tags, only: [:show]
 
   resources :users, only: [:show] do
     resources :chatrooms, only: [:create]

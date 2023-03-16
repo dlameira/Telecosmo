@@ -89,6 +89,7 @@ tags.each do |tag|
   tag1.save!
 end
 
+
 lostinwoods = Universe.new(
   title: 'Lost in Woods',
   callout: 'Monsters are closer than you think',
@@ -108,6 +109,7 @@ lostinwoods = Universe.new(
   )
   story.universe = lostinwoods
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Mystery"), story: story)
 
   story = Story.new(
     edition_number: 2,
@@ -119,6 +121,7 @@ lostinwoods = Universe.new(
   )
   story.universe = lostinwoods
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Mystery"), story: story)
 
   story = Story.new(
     edition_number: 3,
@@ -130,6 +133,7 @@ lostinwoods = Universe.new(
   )
   story.universe = lostinwoods
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Mystery"), story: story)
 
 
 
@@ -152,6 +156,7 @@ galacticgirl = Universe.new(
   )
   story.universe = galacticgirl
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Sci-fi"), story: story)
 
   story = Story.new(
     edition_number: 2,
@@ -163,6 +168,7 @@ galacticgirl = Universe.new(
   )
   story.universe = galacticgirl
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Sci-fi"), story: story)
 
   story = Story.new(
     edition_number: 3,
@@ -174,6 +180,7 @@ galacticgirl = Universe.new(
   )
   story.universe = galacticgirl
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Sci-fi"), story: story)
 
 nix = Universe.new(
   title: 'Stories for Nix',
@@ -194,6 +201,7 @@ nix = Universe.new(
     )
     story.universe = nix
     story.save!
+    StoryTag.create!(tag: Tag.find_by(name: "Drama"), story: story)
 
     story = Story.new(
       edition_number: 2,
@@ -205,6 +213,7 @@ nix = Universe.new(
     )
     story.universe = nix
     story.save!
+    StoryTag.create!(tag: Tag.find_by(name: "Drama"), story: story)
 
     story = Story.new(
       edition_number: 3,
@@ -216,6 +225,7 @@ nix = Universe.new(
     )
     story.universe = nix
     story.save!
+    StoryTag.create!(tag: Tag.find_by(name: "Drama"), story: story)
 
 agatha = Universe.new(
   title: 'Agatha Plotz',
@@ -236,6 +246,7 @@ agatha = Universe.new(
   )
   story.universe = agatha
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Detective"), story: story)
 
   story = Story.new(
     edition_number: 2,
@@ -247,6 +258,7 @@ agatha = Universe.new(
   )
   story.universe = agatha
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Detective"), story: story)
 
   story = Story.new(
     edition_number: 3,
@@ -258,6 +270,7 @@ agatha = Universe.new(
   )
   story.universe = agatha
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Detective"), story: story)
 
 
 
@@ -281,6 +294,7 @@ notanother = Universe.new(
   )
   story.universe = notanother
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Fantasy"), story: story)
 
   story = Story.new(
     edition_number: 2,
@@ -292,6 +306,7 @@ notanother = Universe.new(
   )
   story.universe = notanother
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Fantasy"), story: story)
 
   story = Story.new(
     edition_number: 3,
@@ -303,6 +318,8 @@ notanother = Universe.new(
   )
   story.universe = notanother
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Fantasy"), story: story)
+  StoryTag.create!(tag: Tag.find_by(name: "Adventure"), story: story)
 
 ghostnite = Universe.new(
   title: 'Ghostnite',
@@ -323,6 +340,8 @@ ghostnite = Universe.new(
   )
   story.universe = ghostnite
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Fantasy"), story: story)
+  StoryTag.create!(tag: Tag.find_by(name: "Mystery"), story: story)
 
   story = Story.new(
     edition_number: 2,
@@ -334,6 +353,8 @@ ghostnite = Universe.new(
   )
   story.universe = ghostnite
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Fantasy"), story: story)
+  StoryTag.create!(tag: Tag.find_by(name: "Mystery"), story: story)
 
   story = Story.new(
     edition_number: 3,
@@ -345,6 +366,8 @@ ghostnite = Universe.new(
   )
   story.universe = ghostnite
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Fantasy"), story: story)
+  StoryTag.create!(tag: Tag.find_by(name: "Action"), story: story)
 
 spidercastle = Universe.new(
   title: 'Spider Castle',
@@ -365,6 +388,7 @@ spidercastle = Universe.new(
   )
   story.universe = spidercastle
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Horror"), story: story)
 
   story = Story.new(
     edition_number: 2,
@@ -376,6 +400,8 @@ spidercastle = Universe.new(
   )
   story.universe = spidercastle
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Horror"), story: story)
+  StoryTag.create!(tag: Tag.find_by(name: "Action"), story: story)
 
   story = Story.new(
     edition_number: 3,
@@ -387,6 +413,7 @@ spidercastle = Universe.new(
   )
   story.universe = spidercastle
   story.save!
+  StoryTag.create!(tag: Tag.find_by(name: "Horror"), story: story)
 
 ninjamustache = Universe.new(
   title: 'Ninja Mustache',
@@ -407,6 +434,8 @@ ninjamustache = Universe.new(
     )
     story.universe = ninjamustache
     story.save!
+    StoryTag.create!(tag: Tag.find_by(name: "Comedy"), story: story)
+    StoryTag.create!(tag: Tag.find_by(name: "Action"), story: story)
 
     story = Story.new(
       edition_number: 2,
@@ -418,6 +447,8 @@ ninjamustache = Universe.new(
     )
     story.universe = ninjamustache
     story.save!
+    StoryTag.create!(tag: Tag.find_by(name: "Comedy"), story: story)
+    StoryTag.create!(tag: Tag.find_by(name: "Fantasy"), story: story)
 
     story = Story.new(
       edition_number: 3,
@@ -429,3 +460,5 @@ ninjamustache = Universe.new(
     )
     story.universe = ninjamustache
     story.save!
+    StoryTag.create!(tag: Tag.find_by(name: "Comedy"), story: story)
+    StoryTag.create!(tag: Tag.find_by(name: "Adventure"), story: story)
