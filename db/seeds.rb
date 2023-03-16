@@ -90,6 +90,54 @@ tags.each do |tag|
   tag1.save!
 end
 
+action = Tag.find_by(name: "Action")
+action.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992953/NIX_01_qtatyb.png'
+action.save!
+
+mystery = Tag.find_by(name: "Mystery")
+mystery.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992953/PERDIDOS_01_zhhjrt.png'
+mystery.save!
+
+comedy = Tag.find_by(name: "Comedy")
+comedy.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992953/NIX_01-2_gtiz73.png'
+comedy.save!
+
+horror = Tag.find_by(name: "Horror")
+horror.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992952/asset-5_xfgerj.png'
+horror.save!
+
+scifi = Tag.find_by(name: "Sci-fi")
+scifi.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992953/garota-galatica_twrtsh.png'
+scifi.save!
+
+detective = Tag.find_by(name: "Detective")
+detective.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992953/PERDIDOS_02_xj02lf.png'
+detective.save!
+
+romance = Tag.find_by(name: "Romance")
+romance.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992952/ghostnight_01_hzfi1j.png'
+romance.save!
+
+drama = Tag.find_by(name: "Drama")
+drama.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992951/AGATHA_01_ixnexc.png'
+drama.save!
+
+adventure = Tag.find_by(name: "Adventure")
+adventure.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992953/NAO-E-OUTRA_03_vcruvo.png'
+adventure.save!
+
+fantasy = Tag.find_by(name: "Fantasy")
+fantasy.thumb_url = 'https://res.cloudinary.com/djkudqafd/image/upload/v1678992952/NAO-E-OUTRA_01_uu1x6j.png'
+fantasy.save!
+
+
+
+
+
+
+
+
+
 
 lostinwoods = Universe.new(
   title: 'Lost in Woods',

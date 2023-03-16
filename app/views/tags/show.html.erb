@@ -1,8 +1,29 @@
-<div class="container">
+</div>
+  <h1 class="text-center m-2 p-2"><%= @tag.name %></h1>
   <% @stories.each do |story| %>
-    <div class="t-card-story">
-      <p><%= story.title %></p>
-      <%= image_tag "personagem_perdido.png", width: "40%" %>
+    <div class="t-card-story container">
+
+      <div>
+        <%= image_tag story.thumb_url, class:"story-img" %>
+      </div>
+
+      <div class="t-card-story-content">
+
+        <div>
+          <h3><%= story.title %></h3>
+          <p><%= story.callout %></p>
+        </div>
+
+        <div  class="story-hyde" data-expander-stories-target="scontent">
+          <p><%= story.content %></p>
+        </div>
+
+        <div class="t-card-story-details">
+          <span><%= story.reading_time %> minutes</span>
+        </div>
+
+
+      </div>
+
     </div>
   <% end %>
-</div>

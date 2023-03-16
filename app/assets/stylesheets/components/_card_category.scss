@@ -12,8 +12,13 @@
   flex-direction: column;
 }
 
-.search-bg-pink {
-  background-color: #F65599;
+.font-card {
+  font-size: 16px;
+}
+
+.search-bg-yellow {
+  background-color: #FAAA39;
+  color: #000000;
 }
 
 .search-bg-green {
@@ -21,18 +26,18 @@
   color: #0E1013;
 }
 
-.search-bg-yellow {
-  background-color: #FAAA39;
+.search-bg-pink {
+  background-color: #F65599;
   color: #0E1013;
 }
 
 .search-bg-blue {
-  background-color: #57CFDF;
+  background-color: #43474C;
   color: #0E1013;
 }
 
 .search-bg-grey {
-  background-color: #43474C;
+  background-color: #57CFDF;
 }
 
 .search-bg-lightgrey {
