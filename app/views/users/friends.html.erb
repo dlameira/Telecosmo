@@ -11,7 +11,7 @@
 
 
       <%elsif @user == f.receiver %>
-        <%=link_to(user_path(f.asker)) do%>
+        <%=link_to(user_path(f.asker)) do %>
         <div class="d-flex justify-content-between">
           <%= f.asker.nickname%>
         <%end%>
