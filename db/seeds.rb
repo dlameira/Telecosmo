@@ -71,7 +71,7 @@ Friendship.create!(asker_id: jessie.id, receiver_id: professor.id, is_accepted: 
 Friendship.create!(asker_id: jessie.id, receiver_id: pikachu.id, is_accepted: true)
 
 Friendship.create!(asker_id: user.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.nickname}")
+# Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.nickname}")
 Friendship.create!(asker_id: user.id, receiver_id: ash.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: misty.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: squirtle.id, is_accepted: true)
@@ -81,10 +81,6 @@ Friendship.create!(asker_id: user.id, receiver_id: professor.id, is_accepted: tr
 Friendship.create!(asker_id: user.id, receiver_id: jessie.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: james.id, is_accepted: true)
 Friendship.create!(asker_id: user.id, receiver_id: brock.id, is_accepted: true)
-
-StoryTags.create!(tag_id: 1, story_id: 1)
-
-
 
 tags = ['Action', 'Mystery', 'Comedy', 'Horror', 'Sci-fi', 'Detective', 'Romance', 'Drama', 'Adventure', 'Fantasy']
 tags.each do |tag|
