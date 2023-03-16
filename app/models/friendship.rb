@@ -8,5 +8,3 @@ class Friendship < ApplicationRecord
 
 
 end
-
-
