@@ -7,9 +7,9 @@ class ChatroomsController < ApplicationController
        @chatroom = Chatroom.between(params[:sender_id],
         params[:recipient_id]).first
     else
-     @chatroom = Chatroom.create!(chatroom_params)
+        @chatroom = Chatroom.create!(chatroom_params)
     end
-    redirect_to conversation_messages_path(@chatroom)
+        redirect_to  chatroom_path(@chatroom)
 
 
   end
