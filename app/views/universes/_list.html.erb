@@ -12,8 +12,8 @@
   <% else %>
     <div class="row justify-content-evenly">
       <% @tags.each_with_index do |tag, index| %>
-          <div class="card-category search-bg-<%= colors[index] %>">
-            <%= link_to tag_path(tag), class: "joanadark" do %>
+          <div class="card-category search-bg-<%= colors[index] %>", style="color: black">
+            <%= link_to tag_path(tag) do %>
             <div>
               <div class="size-icon">
                 <%= image_tag tag.thumb_url, width: "50%" %>

@@ -1,5 +1,8 @@
-</div>
-  <h1 class="text-center m-2 p-2"><%= @tag.name %></h1>
+<div>
+  <div class="header-tag">
+    <h1 class="text-center m-2 p-2"><%= @tag.name %></h1>
+    <%= image_tag @tag.thumb_url%>
+  </div>
   <% @stories.each do |story| %>
     <div class="t-card-story container">
 
