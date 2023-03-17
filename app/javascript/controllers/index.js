@@ -7,6 +7,9 @@ import { application } from "./application"
 import AvatarController from "./avatar_controller"
 application.register("avatar", AvatarController)
 
+import ChatroomSubscriptionController from "./chatroom_subscription_controller"
+application.register("chatroom-subscription", ChatroomSubscriptionController)
+
 import ExpanderStoriesController from "./expander_stories_controller"
 application.register("expander-stories", ExpanderStoriesController)
 
