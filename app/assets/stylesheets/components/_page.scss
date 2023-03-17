@@ -1,7 +1,6 @@
 .curtain {
   position: fixed;
-
-  z-index:1
+  z-index: 1
 }
 
 .one {
@@ -15,15 +14,12 @@
   position: fixed;
   z-index: 2;
   overflow: hidden;
-
 }
 
 .three {
   position: fixed;
   z-index: 1;
   overflow: hidden;
-
-
 }
 
 .threescaled {
@@ -32,24 +28,37 @@
   overflow: hidden;
   scale: 20;
   transition: 10s;
-
 }
 
 .four {
+  width: 80%;
   position: fixed;
-
-  transition: 4s;
+  transition: 5s;
   z-index: 0;
 }
 
 .fourscaled {
   position: fixed;
-
-  transition: 4s;
+  // transition: 4s;
 }
 
 .hideslide {
   position: fixed;
-
   opacity: 0;
+}
+
+.five {
+  scale: 50%;
+}
+
+
+.six {
+  scale: 20%;
+
+ }
+
+.medium-text {
+
+  font-size: 30px;
+  font-family: Doyle;
 }

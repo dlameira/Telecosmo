@@ -1,8 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
+import { Typed } from 'typed.js';
+
 
 // Connects to data-controller="pages"
 export default class extends Controller {
-static targets = ["text1", "mobile", "curtain", "title", "closeddoor", "opendoor"]
+static targets = ["hello", "text1", "mobile", "curtain", "title", "closeddoor", "opendoor"]
 
   connect() {
     console.log(this.oneTarget)
@@ -26,28 +28,46 @@ static targets = ["text1", "mobile", "curtain", "title", "closeddoor", "opendoor
 
   scale() {
     // this.text1Target.classList.remove("d-none");
-
-    this.opendoorTarget.classList.add("threescaled");
-    this.opendoorTarget.classList.remove("three");
-
-
+      this.opendoorTarget.classList.add("threescaled");
+      this.opendoorTarget.classList.remove("three");
+      this.text1Target.classList.remove("hideslide");
       this.opendoorTarget.style.zIndex = -1;
       this.text1Target.style.zIndex = 2;
-
-
-  }
-
-  text1() {
-
-    this.opendoorTarget.classList.add("d-none");
-    this.text1Target.classList.remove("d-none");
-  }
+    }
 
   call() {
-    this.text1Target.classList.add("d-none");
-    this.mobileTarget.classList.remove("d-none");
+
+    this.text1Target.classList.add("hideslide");
+    this.mobileTarget.classList.remove("hideslide");
+
+    this.text1Target.style.zIndex = -1;
+    this.mobileTarget.style.zIndex = 2;
+
 
   }
+
+  hello() {
+
+    this.mobileTarget.classList.add("hideslide");
+    this.helloTarget.classList.remove("hideslide");
+    this.helloTarget.style.zIndex = 3;
+  }
+
+  talk() {
+
+  }
+  //   this.mobileTarget.style.zIndex = -1;
+  //   this.whoisTarget.style.zIndex = -1;
+
+
+
+  // }
+
+    // this.text1Target.classList.add("d-none");
+    // this.text1Target.style.zIndex = -1;
+    // this.mobileTarget.style.zIndex = 2;
+    // this.text1Target.removeAttribute('data-action');
+
 
 
 }

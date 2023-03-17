@@ -12,8 +12,29 @@
   flex-direction: column;
 }
 
+.card-category:first-child img{
+  scale: 1.3;
+}
+
+.header-tag {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.header-tag img {
+  width: 15vh;
+  height: 15vh;
+}
+
+.size-icon {
+  scale: 0.9;
+}
+
 .font-card {
-  font-size: 16px;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .search-bg-yellow {
@@ -27,39 +48,37 @@
 }
 
 .search-bg-pink {
-  background-color: #F65599;
-  color: #0E1013;
+  background-color: #5F5FEC;
 }
 
 .search-bg-blue {
   background-color: #43474C;
-  color: #0E1013;
 }
 
 .search-bg-grey {
   background-color: #57CFDF;
+  color:#0E1013;
 }
 
 .search-bg-lightgrey {
-  background-color: #BCBFC3;
-  color: #0E1013;
+  background-color: #f65599;
 }
 
 .search-bg-darkblue {
   background-color: #1B84C2;
-  color: #0E1013;
 }
 
 .search-bg-purple {
-  background-color: #5F5FEC;
-}
-
-.search-bg-white {
-  background-color: #FFF3DC;
-  color: #0E1013;
+  background-color: #BCBFC3;
+  color:#0E1013;
 }
 
 .search-bg-red {
+  background-color: #1B84C2;
+  color: #0E1013;
+}
+
+.search-bg-white {
   background-color: #EF1741;
 }
 
