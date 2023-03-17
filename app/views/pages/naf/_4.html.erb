@@ -1,3 +1,6 @@
+
+
+
 <div class="container d-flex min-vw-100 min-vh-100 vw-100 vh-100 justify-content-center align-items-center" data-controller="pages" >
 
   <div class="curtain bg-black vw-100 vh-100" data-pages-target="black" data-action="">
@@ -16,9 +19,15 @@
     <%= image_tag "https://res.cloudinary.com/djkudqafd/image/upload/v1678888043/door2_eelfzh.png"%>
   </div>
 
-  <div class="four ">
+  <div class="four" data-pages-target="text1" data-action="click->pages#text1">
     <p>
     I had just arrived from school and I quickly noticed that was something wrong at home.
     </p>
   </div>
+
+  <div class="five d-none align-self-center" data-pages-target="mobile" data-action="click->pages#text1">>
+    <%= image_tag "https://res.cloudinary.com/djkudqafd/image/upload/v1678993206/mobile_tafkem.gif"%>
+  </div>
+
+
 </div>

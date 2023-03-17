@@ -1,3 +1,9 @@
+<% if params[:action] == 'show' && params[:controller] == 'stories' %>
+  <!-- do not render navbar or footer -->
+<% else %>
+  <!-- render navbar and footer -->
+<% end %>
+
 <div>
   <%= render "pages/naf/4"%>
 </div>
