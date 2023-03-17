@@ -1,16 +1,24 @@
 .avatar-container{
   display: flex;
+  flex-wrap: wrap;
   width: 100vw;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 10px;
   align-items: center;
 }
 
 .user-avatar{
-  height: 200px;
-  width: 200px;
+  height: 115px;
+  width: 115px;
   background-color: #303636;
   border-radius: 10px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-svg{
+  height: 120px;
+  width: 120px;
 }
