@@ -54,77 +54,77 @@ misty = User.create!(email: 'misty@gmail.com', password: '123456', nickname: 'Mi
                      bio: "i put the M in Mon")
 
 
-Friendship.create!(asker_id: ash.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.nickname}")
+# Friendship.create!(asker_id: ash.id, receiver_id: pikachu.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.nickname}")
 
-Friendship.create!(asker_id: ash.id, receiver_id: charmander.id, is_accepted: true)
-Chatroom.create!(sender_id: ash.id, recipient_id: charmander.id, name: "#{ash.nickname} & #{charmander.nickname}")
+# Friendship.create!(asker_id: ash.id, receiver_id: charmander.id, is_accepted: false)
+# Chatroom.create!(sender_id: ash.id, recipient_id: charmander.id, name: "#{ash.nickname} & #{charmander.nickname}")
 
-Friendship.create!(asker_id: ash.id, receiver_id: squirtle.id, is_accepted: true)
-Chatroom.create!(sender_id: ash.id, recipient_id: squirtle.id, name: "#{ash.nickname} & #{squirtle.nickname}")
+# Friendship.create!(asker_id: ash.id, receiver_id: squirtle.id, is_accepted: false)
+# Chatroom.create!(sender_id: ash.id, recipient_id: squirtle.id, name: "#{ash.nickname} & #{squirtle.nickname}")
 
-Friendship.create!(asker_id: ash.id, receiver_id: bubassaur.id, is_accepted: true)
-Chatroom.create!(sender_id: ash.id, recipient_id: bubassaur.id, name: "#{ash.nickname} & #{bubassaur.nickname}")
+# Friendship.create!(asker_id: ash.id, receiver_id: bubassaur.id, is_accepted: false)
+# Chatroom.create!(sender_id: ash.id, recipient_id: bubassaur.id, name: "#{ash.nickname} & #{bubassaur.nickname}")
 
-Friendship.create!(asker_id: ash.id, receiver_id: professor.id, is_accepted: true)
-Chatroom.create!(sender_id: ash.id, recipient_id: professor.id, name: "#{ash.nickname} & #{professor.nickname}")
+# Friendship.create!(asker_id: ash.id, receiver_id: professor.id, is_accepted: false)
+# Chatroom.create!(sender_id: ash.id, recipient_id: professor.id, name: "#{ash.nickname} & #{professor.nickname}")
 
-Friendship.create!(asker_id: ash.id, receiver_id: brock.id, is_accepted: true)
-Chatroom.create!(sender_id: ash.id, recipient_id: brock.id, name: "#{ash.nickname} & #{brock.nickname}")
+# Friendship.create!(asker_id: ash.id, receiver_id: brock.id, is_accepted: false)
+# Chatroom.create!(sender_id: ash.id, recipient_id: brock.id, name: "#{ash.nickname} & #{brock.nickname}")
 
-Friendship.create!(asker_id: ash.id, receiver_id: misty.id, is_accepted: true)
-Chatroom.create!(sender_id: ash.id, recipient_id: misty.id, name: "#{ash.nickname} & #{misty.nickname}")
-
-
-Friendship.create!(asker_id: bubassaur.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: bubassaur.id, recipient_id: pikachu.id, name: "#{bubassaur.nickname} & #{pikachu.nickname}")
-
-Friendship.create!(asker_id: squirtle.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: squirtle.id, recipient_id: pikachu.id, name: "#{squirtle.nickname} & #{pikachu.nickname}")
-
-Friendship.create!(asker_id: charmander.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: charmander.id, recipient_id: pikachu.id, name: "#{charmander.nickname} & #{pikachu.nickname}")
-
-Friendship.create!(asker_id: professor.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: professor.id, recipient_id: pikachu.id, name: "#{professor.nickname} & #{pikachu.nickname}")
+# Friendship.create!(asker_id: ash.id, receiver_id: misty.id, is_accepted: false)
+# Chatroom.create!(sender_id: ash.id, recipient_id: misty.id, name: "#{ash.nickname} & #{misty.nickname}")
 
 
-Friendship.create!(asker_id: jessie.id, receiver_id: james.id, is_accepted: true)
-Chatroom.create!(sender_id: jessie.id, recipient_id: james.id, name: "#{jessie.nickname} & #{james.nickname}")
+# Friendship.create!(asker_id: bubassaur.id, receiver_id: pikachu.id, is_accepted: false)
+# Chatroom.create!(sender_id: bubassaur.id, recipient_id: pikachu.id, name: "#{bubassaur.nickname} & #{pikachu.nickname}")
 
-Friendship.create!(asker_id: jessie.id, receiver_id: professor.id, is_accepted: true)
-Chatroom.create!(sender_id: jessie.id, recipient_id: professor.id, name: "#{jessie.nickname} & #{professor.nickname}")
+# Friendship.create!(asker_id: squirtle.id, receiver_id: pikachu.id, is_accepted: false)
+# Chatroom.create!(sender_id: squirtle.id, recipient_id: pikachu.id, name: "#{squirtle.nickname} & #{pikachu.nickname}")
 
-Friendship.create!(asker_id: jessie.id, receiver_id: pikachu.id, is_accepted: true)
-Chatroom.create!(sender_id: jessie.id, recipient_id: pikachu.id, name: "#{jessie.nickname} & #{pikachu.nickname}")
+# Friendship.create!(asker_id: charmander.id, receiver_id: pikachu.id, is_accepted: false)
+# Chatroom.create!(sender_id: charmander.id, recipient_id: pikachu.id, name: "#{charmander.nickname} & #{pikachu.nickname}")
+
+# Friendship.create!(asker_id: professor.id, receiver_id: pikachu.id, is_accepted: false)
+# Chatroom.create!(sender_id: professor.id, recipient_id: pikachu.id, name: "#{professor.nickname} & #{pikachu.nickname}")
 
 
-Friendship.create!(asker_id: user.id, receiver_id: ash.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: ash.id, name: "#{user.nickname} & #{ash.nickname}")
+# Friendship.create!(asker_id: jessie.id, receiver_id: james.id, is_accepted: false)
+# Chatroom.create!(sender_id: jessie.id, recipient_id: james.id, name: "#{jessie.nickname} & #{james.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: misty.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: misty.id, name: "#{user.nickname} & #{misty.nickname}")
+# Friendship.create!(asker_id: jessie.id, receiver_id: professor.id, is_accepted: false)
+# Chatroom.create!(sender_id: jessie.id, recipient_id: professor.id, name: "#{jessie.nickname} & #{professor.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: squirtle.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: squirtle.id, name: "#{user.nickname} & #{squirtle.nickname}")
+# Friendship.create!(asker_id: jessie.id, receiver_id: pikachu.id, is_accepted: false)
+# Chatroom.create!(sender_id: jessie.id, recipient_id: pikachu.id, name: "#{jessie.nickname} & #{pikachu.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: bubassaur.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: bubassaur.id, name: "#{user.nickname} & #{bubassaur.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: charmander.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: charmander.id, name: "#{user.nickname} & #{charmander.nickname}")
+# Friendship.create!(asker_id: user.id, receiver_id: ash.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: ash.id, name: "#{user.nickname} & #{ash.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: professor.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: professor.id, name: "#{user.nickname} & #{professor.nickname}")
+# Friendship.create!(asker_id: user.id, receiver_id: misty.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: misty.id, name: "#{user.nickname} & #{misty.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: jessie.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: jessie.id, name: "#{user.nickname} & #{jessie.nickname}")
+# Friendship.create!(asker_id: user.id, receiver_id: squirtle.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: squirtle.id, name: "#{user.nickname} & #{squirtle.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: james.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: james.id, name: "#{user.nickname} & #{james.nickname}")
+# Friendship.create!(asker_id: user.id, receiver_id: bubassaur.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: bubassaur.id, name: "#{user.nickname} & #{bubassaur.nickname}")
 
-Friendship.create!(asker_id: user.id, receiver_id: brock.id, is_accepted: true)
-Chatroom.create!(sender_id: user.id, recipient_id: brock.id, name: "#{user.nickname} & #{brock.nickname}")
+# Friendship.create!(asker_id: user.id, receiver_id: charmander.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: charmander.id, name: "#{user.nickname} & #{charmander.nickname}")
+
+# Friendship.create!(asker_id: user.id, receiver_id: professor.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: professor.id, name: "#{user.nickname} & #{professor.nickname}")
+
+# Friendship.create!(asker_id: user.id, receiver_id: jessie.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: jessie.id, name: "#{user.nickname} & #{jessie.nickname}")
+
+# Friendship.create!(asker_id: user.id, receiver_id: james.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: james.id, name: "#{user.nickname} & #{james.nickname}")
+
+# Friendship.create!(asker_id: user.id, receiver_id: brock.id, is_accepted: false)
+# Chatroom.create!(sender_id: user.id, recipient_id: brock.id, name: "#{user.nickname} & #{brock.nickname}")
 
 
 
