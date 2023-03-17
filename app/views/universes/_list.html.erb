@@ -14,8 +14,8 @@
     <div class="row justify-content-evenly">
       <% @tags.each_with_index do |tag, index| %>
         <div class="card-category search-bg-<%= colors[index] %>">
-          <%= image_tag "personagem_perdido.png", width: "60%" %>
-          <h3><%= tag.name %></h3>
+          <%= image_tag tag.thumb_url, width: "50%" %>
+          <h3 class="font-card"><%= tag.name %></h3>
         </div>
       <% end %>
     </div>
