@@ -1,11 +1,14 @@
 <div class="t-footer">
+
   <%= link_to root_path do %>
     <i class="fas fa-home"></i>
   <% end %>
-  <%= link_to(friends_user_path(current_user), class: "icon-link") do %>
-  <i class="fas fa-users"></i>
-    <% end %>
 
+  <% if user_signed_in? %>
+    <%= link_to friends_user_path(current_user) do %>
+      <i class="fas fa-users"></i>
+    <% end %>
+  <% end %>
 
   <%= link_to search_path do %>
     <i class="fas fa-search"></i>
