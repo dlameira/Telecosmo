@@ -4,8 +4,7 @@
       <% @universes.each do |universe| %>
         <%= link_to universe_path(universe), class: "universe-card col-6 my-3" do %>
           <div class="card-category">
-            <%= image_tag universe.thumb_url, width: "60%" %>
-            <h3><%= universe.title%></h3>
+            <%= image_tag universe.thumb_url, width: "50%" %>
           </div>
         <% end %>
       <% end %>

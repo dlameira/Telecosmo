@@ -14,11 +14,13 @@
           <p><%= story.callout %></p>
         </div>
 
-        <div  class="story-hyde" data-expander-stories-target="scontent">
+        <div  class="story-hyde">
           <p><%= story.content %></p>
         </div>
 
         <div class="t-card-story-details">
+
+          <%=link_to "read", story_path(story), class: "button-three-small"%>
           <span><%= story.reading_time %> minutes</span>
         </div>
 
@@ -27,3 +29,5 @@
 
     </div>
   <% end %>
+
+</div>

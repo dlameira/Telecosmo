@@ -60,9 +60,10 @@
 
       <div class="t-card-story-content">
 
-        <div>
+        <div class="t-card-story-content-extra">
           <h3><%= story.title %></h3>
           <p><%= story.callout %></p>
+          <span><%= story.reading_time %> minutes</span>
         </div>
 
         <div  class="story-hyde" data-expander-stories-target="scontent">
@@ -72,10 +73,9 @@
         <div class="t-card-story-details">
           <span class="sticker-tag">Mistery</span>
 
-          <span><%= story.reading_time %> minutes</span>
+          <%=link_to "read", story_path(story), class: "button-three-small"%>
         </div>
 
-        <%=link_to "read", story_path(story)%>
 
       </div>
 
