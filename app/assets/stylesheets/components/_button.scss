@@ -74,11 +74,9 @@ text-shadow: 1px 1px 0px #000000;
 
 
   // SMALL BUTTONS
-  .button-one-small{
+  .button-one-small {
     width: 75px;
     height: 20.23px;
-    left: 34px;
-    top: 96px;
     border: 1px solid #000000;
     box-shadow: 3px 3px 0px #BD382B, 4px 4px 0px #000000;
     border-radius: 10px;
@@ -97,7 +95,6 @@ text-shadow: 1px 1px 0px #000000;
     letter-spacing: 0.045em;
     font-style: normal;
     text-shadow: 1px 1px 0px #000000;
-
     }
 
 
@@ -128,3 +125,24 @@ text-shadow: 1px 1px 0px #000000;
     text-shadow: 1px 1px 0px #000000;
 
   }
+
+  .button-three-small {
+    width: 75px;
+    height: 20.23px;
+    border: 1px solid #000000;
+    box-shadow: 3px 3px 0px #BD382B, 4px 4px 0px #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #F65599;
+    background-color: #5F5FEC;
+    font-family: Sharp Sans Display No2;
+    font-size: 12px;
+    align-items: center;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0.045em;
+    font-style: normal;
+    text-shadow: 1px 1px 0px #000000;
+    }

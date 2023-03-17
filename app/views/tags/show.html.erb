@@ -1,5 +1,8 @@
-</div>
-  <h1 class="text-center m-2 p-2"><%= @tag.name %></h1>
+<div>
+  <div class="header-tag">
+    <h1 class="text-center m-2 p-2"><%= @tag.name %></h1>
+    <%= image_tag @tag.thumb_url%>
+  </div>
   <% @stories.each do |story| %>
     <div class="t-card-story container">
 
@@ -14,11 +17,13 @@
           <p><%= story.callout %></p>
         </div>
 
-        <div  class="story-hyde" data-expander-stories-target="scontent">
+        <div  class="story-hyde">
           <p><%= story.content %></p>
         </div>
 
         <div class="t-card-story-details">
+
+          <%=link_to "read", story_path(story), class: "button-three-small"%>
           <span><%= story.reading_time %> minutes</span>
         </div>
 
@@ -27,3 +32,5 @@
 
     </div>
   <% end %>
+
+</div>
