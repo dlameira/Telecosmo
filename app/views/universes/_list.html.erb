@@ -13,10 +13,18 @@
   <% else %>
     <div class="row justify-content-evenly">
       <% @tags.each_with_index do |tag, index| %>
-        <div class="card-category search-bg-<%= colors[index] %>">
-          <%= image_tag tag.thumb_url, width: "50%" %>
-          <h3 class="font-card"><%= tag.name %></h3>
-        </div>
+          <div class="card-category search-bg-<%= colors[index] %>">
+            <%= link_to tag_path(tag), class: "joanadark" do %>
+            <div>
+              <div class="size-icon">
+                <%= image_tag tag.thumb_url, width: "50%" %>
+              </div>
+              <div>
+                <h3 class="font-card"><%= tag.name %></h3>
+              </div>
+            <% end %>
+            </div>
+          </div>
       <% end %>
     </div>
   <%end%>
