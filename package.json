@@ -7,6 +7,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "dicebear": "^5.3.4",
+    "typed.js": "^2.0.132",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1"
   },
