@@ -8,6 +8,7 @@
     "@rails/actioncable": "^7.0.4-3",
     "bootstrap": "^5.2.3",
     "dicebear": "^5.3.4",
+    "typed.js": "^2.0.132",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1"
   },
