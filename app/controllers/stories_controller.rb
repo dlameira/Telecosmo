@@ -4,5 +4,6 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
     @universe = @story.universe
     authorize @story
+
   end
 end

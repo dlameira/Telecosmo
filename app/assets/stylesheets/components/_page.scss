@@ -1,6 +1,12 @@
+.curtain {
+  position: fixed;
+
+  z-index:1
+}
+
 .one {
   position: fixed;
-  z-index: 3;
+  z-index: 2;
   overflow: hidden;
   transition: 1s;
 }
@@ -29,6 +35,21 @@
 
 }
 
+.four {
+  position: fixed;
+
+  transition: 4s;
+  z-index: 0;
+}
+
+.fourscaled {
+  position: fixed;
+
+  transition: 4s;
+}
+
 .hideslide {
+  position: fixed;
+
   opacity: 0;
 }
