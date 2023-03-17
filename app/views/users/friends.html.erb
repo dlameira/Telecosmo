@@ -4,18 +4,26 @@
       <% if @user == f.asker %>
         <%=link_to(user_path(f.receiver)) do%>
           <div class="d-flex justify-content-between">
-          <%= f.receiver.nickname %>
+          <div class="user_friends"><%= f.receiver.nickname %></div>
         <%end%>
-           <%= button_to "Delete", delete_friendship_user_path(f), method: :delete,class: 'button-two-small' %>
+            <div>
+           <%= link_to "message", chatroom_path(@chatroom), class: 'button-two-small'%>
+
+           <%= button_to "Delete", delete_friendship_user_path(f), method: :delete,class: 'button-one-small' %>
+          </div>
         </div>
 
 
       <%elsif @user == f.receiver %>
         <%=link_to(user_path(f.asker)) do %>
         <div class="d-flex justify-content-between">
-          <%= f.asker.nickname%>
+         <div class="user_friends"> <%= f.asker.nickname%></div>
         <%end%>
+        <div>
+         <%= link_to "message", chatroom_path(@chatroom), class: 'button-one-small'%>
+
           <%= button_to "Delete", delete_friendship_user_path(f), method: :delete,class: 'button-two-small' %>
+            </div>
           </div>
 
       <%end%>

@@ -1,0 +1,16 @@
+<h4 class="text-center my-3">Choose your avatar</h4>
+
+<div class="container avatar-container" data-controller="avatar">
+
+
+    <div data-avatar-target="newavatarboy" class="user-avatar"></div>
+
+
+  <div data-avatar-target="newavatargirl" class="user-avatar"></div>
+
+  <%= form_with url: avatars_path do |f|%>
+    <%= text_field_tag :status, '', data: { avatar_target: "inputOne" } %>
+    <%= f.submit %>
+  <% end %>
+
+</div>

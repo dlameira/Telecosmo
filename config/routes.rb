@@ -29,4 +29,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
 
+  resources :avatars, only: %i[new create]
 end
