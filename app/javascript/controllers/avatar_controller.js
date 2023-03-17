@@ -11,7 +11,7 @@ const hair = []
 
 
 export default class extends Controller {
-  static targets = [ "inputOne", "title", "fase1", "fase2", "fase3"]
+  static targets = [ "inputOne", "title", "title2", "title3", "title4","title5", "fase1", "fase2", "fase3"]
 
   connect() {
 
@@ -35,7 +35,8 @@ export default class extends Controller {
     console.log(persona)
     this.fase1Target.classList.add('d-none')
     this.fase2Target.classList.remove("d-none")
-    this.titleTarget.classList.add('d-none')
+    this.title2Target.classList.add('d-none')
+    this.title3Target.classList.remove('d-none')
   }
 
   setaccessories(event) {
@@ -43,6 +44,8 @@ export default class extends Controller {
     console.log(accessories)
     this.fase2Target.classList.add('d-none')
     this.fase3Target.classList.remove("d-none")
+    this.title3Target.classList.add("d-none")
+    this.title4Target.classList.remove('d-none')
   }
 
   seteyes(event) {
@@ -50,6 +53,15 @@ export default class extends Controller {
     console.log(eyes)
     this.fase3Target.classList.add('d-none')
     this.fase4Target.classList.remove("d-none")
+    this.title4Target.classList.add("d-none")
+    this.title5Target.classList.remove('d-none')
+  }
+
+  sethair(event) {
+    hair.push(event.currentTarget.getAttribute('id'))
+    console.log(hair)
+    this.fase4Target.classList.add('d-none')
+    this.fase5Target.classList.remove("d-none")
   }
 
 }
