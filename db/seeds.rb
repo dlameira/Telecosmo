@@ -10,8 +10,8 @@ user = User.create!(email: "admin@telecosmo.com.br", password: "123456", nicknam
                     bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
 
 User.create!(email: 'pokemon@gmail.com', password: '123456', nickname: 'Pokemon', first_name: 'Pokemon',
-                     last_name: 'Silva', birthday: Date.new(1987, 8, 28),
-                     bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
+             last_name: 'Silva', birthday: Date.new(1987, 8, 28),
+             bio: "Hello people! We are creative group that loves stories and found a way to share them with you!")
 
 pikachu = User.create!(email: 'pikachu@gmail.com', password: '123456', nickname: 'Pika', first_name: 'Pikachu',
                        last_name: 'Silva', birthday: Date.new(1991, 2, 20),
