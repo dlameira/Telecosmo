@@ -7,20 +7,20 @@ padding: 15px;
 max-width: 95vw;
 }
 .t-card-story:nth-child(odd){
-  background-color: $f16;
-}
-
-.t-card-story:nth-child(even){
   background-color: $f12;
 }
 
+.t-card-story:nth-child(even){
+  background-color: $f16;
+}
+
 .t-card-story h3{
-  color: #2C2E31;
+  color: #19191a;
   margin-bottom: 5px;
 }
 
 .t-card-story p{
-  color: #2C2E31;
+  color: #19191a;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -30,7 +30,7 @@ max-width: 95vw;
 }
 
 .t-card-story span{
-  color: #2C2E31;
+  color: #19191a;
   text-align: right;
   font-style: italic;
   font-weight: 700;
