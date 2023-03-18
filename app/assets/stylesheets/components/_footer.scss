@@ -1,5 +1,5 @@
 .t-footer{
-  background-color: $dark-gray;
+  background-color: $dark;
   height: 70px;
   color: $cream;
   font-size: 30px;
@@ -9,9 +9,10 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
+  border-top: 2px solid #86FF31;
 }
 
 .t-footer i{
-  color: $cream;
+  color: #86FF31;
 
 }
