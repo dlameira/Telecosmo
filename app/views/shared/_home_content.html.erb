@@ -1,6 +1,6 @@
 <div class="wrapper">
 
-  <% @universes.each do |u| %>
+  <% @universes.shuffle.each do |u| %>
     <%= link_to universe_path(u) do %>
       <div class="universe-folder">
         <%= image_tag u.thumb_url, class: 'universe-folder-img' %>
