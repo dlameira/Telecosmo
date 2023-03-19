@@ -102,6 +102,7 @@ export default class extends Controller {
 
     this.avatarfinalTarget.insertAdjacentHTML('beforeend', avatar)
     this.inputOneTarget.value = avatar
+    this.titleTarget.classList.add('d-none')
   }
 
 
