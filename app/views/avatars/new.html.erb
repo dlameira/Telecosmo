@@ -2,7 +2,7 @@
 
 
 
-<div class="container avatar-container " data-controller="avatar">
+<div class="container avatar-container text-center" data-controller="avatar">
   <h6 class="text-center" data-avatar-target="title2"> Choose your character </h6>
   <h6 class="text-center d-none" data-avatar-target="title3"> Choose your accesories </h6>
   <h6 class="text-center d-none" data-avatar-target="title4"> Eyes style </h6>
@@ -164,9 +164,16 @@
 
   </div>
 
-  <div class="d-none" data-avatar-target="avatarfinaldiv">
+  <div class="d-none avatar-final" data-avatar-target="avatarfinaldiv">
     <h6>Your Avatar</h6>
-    <div data-avatar-target="avatarfinal" class="avatar-svg"></div>
+    <div data-avatar-target="avatarfinal" class="avatar-svg user-avatar user-avatar-final"></div>
+
+    <%= link_to "restart", new_avatar_path, class:'button-two' %>
+
+    <%= form_with url: avatars_path do |f|%>
+      <% text_field_tag :status, '', data: { avatar_target: "inputOne" }%>
+      <%= f.submit , class: 'btn btn-primary' %>
+    <% end %>
   </div>
 
 </div>

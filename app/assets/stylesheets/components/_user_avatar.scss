@@ -18,6 +18,18 @@
   justify-content: center;
 }
 
+.avatar-final{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100vw;
+}
+.user-avatar-final {
+  background-color: $f16 !important;
+}
 .avatar-svg{
   height: 120px;
   width: 120px;
