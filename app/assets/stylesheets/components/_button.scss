@@ -43,6 +43,7 @@ text-shadow: 1px 1px 0px #000000;
   text-shadow: 1px 1px 0px #000000;
   }
 
+
 .button-three {
   width: 152px;
   height: 41px;
@@ -80,12 +81,12 @@ text-shadow: 1px 1px 0px #000000;
     left: 30px;
     top: 107px;
     border: 1px solid #000000;
-    box-shadow: 3px 3px 0px #FF8B97, 4px 4px 0px #000000;
+    box-shadow: 3px 3px 0px $f8, 4px 4px 0px #000000;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
-    color: #FF533F;
-    background-color: #F3DB56;
+    color: $f8;
+    background-color: $f9;
     font-family: Sharp Sans Display No2;
     font-size: 20px;
     font-weight: 800;
@@ -101,12 +102,12 @@ text-shadow: 1px 1px 0px #000000;
     left: 30px;
     top: 107px;
     border: 1px solid #000000;
-    box-shadow: 3px 3px 0px #FF8B97, 4px 4px 0px #000000;
+    box-shadow: 3px 3px 0px $f8, 4px 4px 0px #000000;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
-    color: #F65599;
-    background-color: #5F5FEC;
+    color: $f3;
+    background-color: $f6;
     font-family: Sharp Sans Display No2;
     font-size: 20px;
     font-weight: 800;
@@ -198,4 +199,14 @@ text-shadow: 1px 1px 0px #000000;
     letter-spacing: 0.045em;
     font-style: normal;
     text-shadow: 1px 1px 0px #000000;
+    }
+
+    .nickname{
+      font-family: 'Doyle';
+
+    }
+
+    .two-buttons {
+      display: flex;
+      justify-content: space-between;
     }
