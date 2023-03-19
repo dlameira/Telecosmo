@@ -3,7 +3,7 @@ import { createConsumer } from "@rails/actioncable"
 
 export default class extends Controller {
   static values = { chatroomId: Number }
-  static targets = ["messages"]
+  static targets = ["messages", "form"]
 
   connect() {
     this.channel = createConsumer().subscriptions.create(
@@ -16,6 +16,7 @@ export default class extends Controller {
   insertMessageAndScrollDown(data) {
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+    this.formTarget.reset()
   }
 
   resetForm(event) {
@@ -27,4 +28,3 @@ export default class extends Controller {
     this.channel.unsubscribe()
   }
 }
-
