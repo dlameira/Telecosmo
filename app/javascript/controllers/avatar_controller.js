@@ -4,6 +4,7 @@ import { bigSmile } from '@dicebear/collection';
 
 // Connects to data-controller="avatar"
 
+const carachter = []
 const persona = []
 const accessories = []
 const eyes = []
@@ -30,9 +31,8 @@ export default class extends Controller {
     // this.inputOneTarget.value = this.boy
   }
 
-
-
   setpersona(event) {
+    persona.pop()
     persona.push(event.currentTarget.getAttribute('id'))
     console.log(persona)
     this.fase1Target.classList.add('d-none')
@@ -43,6 +43,7 @@ export default class extends Controller {
   }
 
   setaccessories(event) {
+    accessories.pop()
     accessories.push(event.currentTarget.getAttribute('id'))
     console.log(accessories)
     this.fase2Target.classList.add('d-none')
@@ -53,6 +54,7 @@ export default class extends Controller {
   }
 
   seteyes(event) {
+    eyes.pop()
     eyes.push(event.currentTarget.getAttribute('id'))
     console.log(eyes)
     this.fase3Target.classList.add('d-none')
@@ -63,6 +65,7 @@ export default class extends Controller {
   }
 
   sethair(event) {
+    hair.pop()
     hair.push(event.currentTarget.getAttribute('id'))
     console.log(hair)
     this.fase4Target.classList.add('d-none')
@@ -98,6 +101,8 @@ export default class extends Controller {
     const avatar = avatar2.toString()
 
     this.avatarfinalTarget.insertAdjacentHTML('beforeend', avatar)
+    this.inputOneTarget.value = avatar
+    this.titleTarget.classList.add('d-none')
   }
 
 
