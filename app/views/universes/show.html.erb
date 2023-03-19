@@ -27,12 +27,12 @@
           <% if @universe.bookmarks.any? { |book| book[:user_id] == current_user.id} %>
             <% @bookmark = @universe.bookmarks.find { |bookmark| bookmark[:user_id] == current_user.id } %>
             <%= link_to universe_bookmark_path(@universe, @bookmark) ,data: {turbo_method: :delete} do %>
-              <i class="fas fa-bookmark" aria-hidden="true"></i>
+              <i class="fas fa-heart" aria-hidden="true"></i>
             <% end %>
           <% else %>
             <%= simple_form_for [@universe, @bookmark] do |f|%>
               <%= button_tag type: 'submit', class: "button postfix" do %>
-                <i class="far fa-bookmark" aria-hidden="true"></i>
+                <i class="far fa-heart" aria-hidden="true"></i>
               <% end %>
             <% end %>
           <% end %>
