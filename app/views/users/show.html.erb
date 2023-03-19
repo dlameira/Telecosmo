@@ -64,16 +64,31 @@
         <% end %>
       <% end %>
 
-      <%@pending_friendships.each do |f|%>
-        <%= "#{f.asker.nickname} wants to be your friend" %>
-        <%= simple_form_for f, url:  accept_friendship_user_path(f) do |form| %>
-          <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
-          <%= form.button :submit, "Accept",class:'button-two' %>
-        <% end %>
-        <%= button_to "Decline", decline_friendship_user_path(f),class:'button-one', method: :delete %>
-      <% end %>
 
+      <div class="requests-notifications">
+      <% if @pending_friendships.any?%>
+        <% requests = @pending_friendships.count%>
+        <% f = @pending_friendships.first%>
+        <div class="text-center">
+        <%= requests > 1 ?  "You have #{requests} requests" : "You have 1 request"%>
+
+      <div class="request-container-card" >
+        <div class="button-container">
+        <span class="nickname"><%= f.asker.nickname %></span> wants to be your friend
+        <%= simple_form_for f, url:  accept_friendship_user_path(f) do |form| %>
+          <div class="request-buttons ">
+          <%= form.input :is_accepted, as: :hidden, input_html: { value: true } %>
+          <%= form.button :submit, "Accept",class:'button-accept' %>
+        <%= button_to "Decline", decline_friendship_user_path(f),class:'button-decline', method: :delete %>
+          </div>
+        </div>
+      </div>
+      </div>
+        <% end %>
+      <% end %>
     </div>
+    </div>
+
 
 
   <% if Friendship.exists?(asker_id: current_user.id, receiver_id: @user.id, is_accepted: true) || Friendship.exists?(asker_id: @user.id, receiver_id: current_user.id, is_accepted: true) %>

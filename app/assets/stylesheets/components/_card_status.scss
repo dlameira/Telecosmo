@@ -1,3 +1,33 @@
+.request-container-card {
+
+  border: 2px solid $f8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  margin: 30px;
+  padding-top: 10px;
+  position: relative;
+}
+.request-container-card p{
+
+  font-family: 'Doyle';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16.8153px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.045em;
+  color: #FFFFFF;
+}
+.requests-notifications{
+
+
+  float:right;
+
+}
+
 .profile-container-card {
 
   border: 2px solid #F65599;
