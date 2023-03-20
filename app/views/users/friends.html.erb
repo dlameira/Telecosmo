@@ -16,6 +16,7 @@
             </div>
 
         <%end%>
+            <% if @user == current_user %>
             <div class="two-buttons">
 
             <%= link_to chatroom_path(right_chatroom) do%>
@@ -24,11 +25,12 @@
             <%= link_to delete_friendship_user_path(f), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
                 <i class="far fa-trash-alt"> Delete</i>
             <% end %>
+            <% end %>
 
           </div>
         </div>
 
-      <%elsif @user == f.receiver %>
+      <%elsif @user == f.receiver  %>
 
         <% right_chatroom = Chatroom.find_by(sender_id: f.asker_id, recipient_id: f.receiver_id) || Chatroom.find_by(sender_id: f.receiver_id, recipient_id: f.asker_id) %>
         <%=link_to(user_path(f.asker)) do %>
@@ -40,6 +42,7 @@
             </div>
 
         <%end%>
+            <% if @user == current_user%>
             <div class="two-buttons">
             <%= link_to chatroom_path(right_chatroom) do %>
                 <i class="fas fa-comment"> Chat</i>
@@ -48,6 +51,7 @@
 
             <%= link_to delete_friendship_user_path(f), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
                 <i class="far fa-trash-alt"> Delete</i>
+            <% end %>
             <% end %>
             </div>
 
