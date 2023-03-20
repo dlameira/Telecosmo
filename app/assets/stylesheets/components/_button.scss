@@ -99,8 +99,6 @@ text-shadow: 1px 1px 0px #000000;
   .button-decline{
     width: 120px;
     height: 30px;
-    left: 30px;
-    top: 107px;
     border: 1px solid #000000;
     box-shadow: 3px 3px 0px $f3, 4px 4px 0px #000000;
     border-radius: 10px;
@@ -122,6 +120,7 @@ text-shadow: 1px 1px 0px #000000;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
   }
 
 
@@ -208,5 +207,7 @@ text-shadow: 1px 1px 0px #000000;
 
     .two-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      gap:10px;
+
     }
