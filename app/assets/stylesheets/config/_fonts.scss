@@ -8,12 +8,123 @@ $headers-font: "Doyle", "Helvetica", "sans-serif";
 // To use a font file (.woff) uncomment following lines
 @font-face {
   font-family: 'Doyle';
-  src: font-url('Doyle.otf');
+  src: font-url('Doyle-Black.otf');
 }
-$my-font: "Doyle";
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-BlackItalic.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-Bold.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-BoldItalic.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-Light.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-LightItalic.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-Medium.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-MediumItalic.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-Regular.otf');
+}
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle-RegularItalic.otf');
+}
 
 
 @font-face {
   font-family: 'Sharp Sans Display No2';
-  src: url('SharpSansDisplayNo2.otf');
+  src: font-url('SharpSansDisplayNo2-Black.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-BlackOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Bold.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-BoldOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Book');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-BookOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Extrabold.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-ExtraboldOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Hairline.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-HairlineOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Light.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-LightOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Medium.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-MediumOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Semibold.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-SemiboldOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Thin.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-ThinOblique.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-Ultrathin.otf');
+}
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: font-url('SharpSansDisplayNo2-UltrathinOblique.otf');
 }
