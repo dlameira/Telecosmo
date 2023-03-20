@@ -68,7 +68,6 @@ text-shadow: 1px 1px 0px #000000;
   .user_friends{
     color: $cream;
     font-family: $headers-font;
-    margin-right: 800px;
   }
 
 
@@ -121,6 +120,7 @@ text-shadow: 1px 1px 0px #000000;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
   }
 
 
@@ -207,5 +207,7 @@ text-shadow: 1px 1px 0px #000000;
 
     .two-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      gap:10px;
+
     }
