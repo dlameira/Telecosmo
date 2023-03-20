@@ -4,7 +4,7 @@ import { Typed } from 'typed.js';
 
 // Connects to data-controller="pages"
 export default class extends Controller {
-static targets = ["hello", "text1", "mobile", "curtain", "title", "closeddoor", "opendoor"]
+static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "closeddoor", "opendoor"]
 
   connect() {
     console.log(this.oneTarget)
@@ -54,8 +54,18 @@ static targets = ["hello", "text1", "mobile", "curtain", "title", "closeddoor", 
   }
 
   talk() {
+    this.helloTarget.style.zIndex = 1;
+    this.helloTarget.classList.add("hideslide");
+    this.momdialogTarget.classList.remove("hideslide");
+    this.momdialogTarget.style.zIndex = 1;
+
 
   }
+
+
+
+
+
   //   this.mobileTarget.style.zIndex = -1;
   //   this.whoisTarget.style.zIndex = -1;
 
