@@ -6,11 +6,14 @@ $body-font: "Sharp Sans Display No2", "Helvetica", "sans-serif";
 $headers-font: "Doyle", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+  font-family: 'Doyle';
+  src: font-url('Doyle.otf');
+}
+$my-font: "Doyle";
+
+
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: url('SharpSansDisplayNo2.otf');
+}

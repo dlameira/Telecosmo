@@ -3,7 +3,7 @@
   <%= form_with url: search_path, method: :get, html: {class:
     "my-3", data: {search_universes_target: "form"}} do |f| %>
     <%= f.text_field :query,
-                     class: "form-control universe_search",
+                     class: "form-control universe_search text-center",
                      placeholder: "What are you looking for?",
                      value: params[:query],
                      data: {search_universes_target: "input",
