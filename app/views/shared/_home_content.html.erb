@@ -4,8 +4,8 @@
     <%= link_to universe_path(u) do %>
       <div class="universe-folder">
         <%= image_tag u.thumb_url, class: 'universe-folder-img' %>
-        <h3><%=u.title%></h3>
-        <p><%=u.user.nickname%></p>
+        <h3 class="universe-title"><%=u.title%></h3>
+        <p class="universe-nickname"><%=u.user.nickname%></p>
       </div>
     <%end%>
   <%end%>
