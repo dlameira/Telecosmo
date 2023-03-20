@@ -1,4 +1,4 @@
-<div class="container d-flex min-vw-100 min-vh-100 vw-100 vh-100 justify-content-center align-items-center" data-controller="pages" >
+<div class="container d-flex min-vw-100 min-vh-100 vw-100 vh-100 justify-content-center align-items-center monster-wrapper" data-controller="pages" >
 
   <div class="curtain bg-black vw-100 vh-100" data-pages-target="black" data-action="">
   </div>
@@ -31,14 +31,14 @@
   </div>
 
   <div class="seven hideslide" data-pages-target="momdialog" data-action="click->pages#dialogue">
-    <p>HELLO?</p>
-    <p>SON??</p>
-    <p>YOU GETTA OUT OF THERE...</p>
-    <p>THERE'S A... </p>
-    <p>A...</p>
-    <p>MONSTER!</p>
+    <%# <p>HELLO?<br>SON??<br>YOU GETTA OUT OF THERE...<br>THERE'S A...<br>A...</p> %>
+    <h2><span class="typed" data-pages-target="momtext"></span></h2>
   </div>
 
-  <div class=" eight hidestyle" data-pages-target="monster" data-action="click->pages#">
+  <div class="eight hideslide" data-pages-target="monster" data-action="click->pages#">
     <%= image_tag "https://res.cloudinary.com/djkudqafd/image/upload/v1679266460/monstermobile6_qlg0ut.png"%>
   </div>
+
+
+
+</div>

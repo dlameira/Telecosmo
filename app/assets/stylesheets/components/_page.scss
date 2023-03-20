@@ -54,11 +54,34 @@
 
 .six {
   scale: 20%;
-
+  position: absolute;
  }
 
 .medium-text {
-
   font-size: 30px;
   font-family: Doyle;
+}
+
+.eight{
+  z-index: 0;
+  transition: 6s;
+  position: absolute;
+  top: -181px;
+  left: 54px;
+  scale: 40%;
+  filter: blur(10px);
+}
+
+.eight-appear{
+  scale: 57%;
+  filter: blur(0px);
+}
+.monster-wrapper{
+  position: relative;
+}
+
+.the-boy-who-lived{
+  position: absolute;
+  top: -1341px;
+  left: -963px;
 }
