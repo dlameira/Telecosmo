@@ -45,12 +45,12 @@
             <% if @user == current_user%>
             <div class="two-buttons">
             <%= link_to chatroom_path(right_chatroom) do %>
-                <i class="fas fa-comment"> Chat</i>
+                <i class="fas fa-comment fa-xl"> </i>
             <%end%>
 
 
             <%= link_to delete_friendship_user_path(f), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                <i class="far fa-trash-alt"> Delete</i>
+                <i class="far fa-trash-alt fa-xl"> </i>
             <% end %>
             <% end %>
             </div>
