@@ -68,6 +68,7 @@ text-shadow: 1px 1px 0px #000000;
   .user_friends{
     color: $cream;
     font-family: $headers-font;
+    margin-right: 800px;
   }
 
 
@@ -99,8 +100,6 @@ text-shadow: 1px 1px 0px #000000;
   .button-decline{
     width: 120px;
     height: 30px;
-    left: 30px;
-    top: 107px;
     border: 1px solid #000000;
     box-shadow: 3px 3px 0px $f3, 4px 4px 0px #000000;
     border-radius: 10px;

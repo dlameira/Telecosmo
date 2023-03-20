@@ -2,6 +2,7 @@
 
   border: 2px solid $f14;
   border-radius: 10px;
+  padding:10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -81,4 +82,17 @@
   width: 2px;
   height: 40px;
   background-color: #F65599;
+}
+.friends-container-card{
+  border: 2px solid $f12;
+  border-radius: 10px;
+  padding:10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  margin: 30px;
+  padding-top: 10px;
+  position: relative;
+
 }
