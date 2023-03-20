@@ -17,9 +17,9 @@
 }
 
 .wrapper h3{
-  font-family: 'Doyle';
-  font-style: normal;
-  font-weight: 400;
+  // font-family: 'Doyle';
+  // font-style: normal;
+  // font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #FFFAF1;
@@ -52,4 +52,16 @@
   text-shadow: 2px 2px 0px #000000;
   margin: 0 0 0 15px;
   padding-bottom: 0px;
+}
+
+.universe-title {
+  font-weight: 800;
+  font-family: "Doyle Regular";
+  font-style: normal;
+}
+
+.universe-nickname {
+  font-weight: 800;
+  font-family: "Sharp Sans Display No2 Medium";
+  font-style: normal;
 }

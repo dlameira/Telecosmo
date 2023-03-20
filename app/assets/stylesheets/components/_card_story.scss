@@ -32,6 +32,7 @@ max-width: 95vw;
 .t-card-story span{
   color: #19191a;
   text-align: right;
+  font-family: 'Sharp Sans Display No2 Bold';
   font-style: italic;
   font-weight: 700;
   font-size: 10px;
@@ -44,6 +45,10 @@ max-width: 95vw;
   justify-content: space-between;
 }
 
+.t-card-story-content p {
+  font-family: 'Sharp Sans Display No2 Medium';
+}
+
 .t-card-story-details{
   display: flex;
   justify-content: space-between;
@@ -53,6 +58,14 @@ max-width: 95vw;
 .t-card-story-content-extra {
   margin-bottom: 5px;
   padding-bottom: 5px;
+}
+
+// .t-card-story-content-extra h3 {
+//   font-family: "Boyle Bold";
+// }
+
+.t-card-story-content-extra p {
+  font-family: 'Sharp Sans Display No2 Medium';
 }
 
 .t-card-story-details i {
