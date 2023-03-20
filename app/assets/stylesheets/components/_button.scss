@@ -70,9 +70,27 @@ text-shadow: 1px 1px 0px #000000;
     font-family: $headers-font;
   }
 
+  //MEDIUN BUTTONS
 
-
-
+.button-two-medium {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #000000;
+    box-shadow: 3px 3px 0px #BD382B, 4px 4px 0px #000000;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #FF533F;
+    background-color: #F3DB56;
+    font-family: Sharp Sans Display No2;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0.045em;
+    font-style: normal;
+    text-shadow: 1px 1px 0px #000000;
+    padding: 4px 10px;
+    }
 
   // SMALL BUTTONS
   .button-accept{
