@@ -94,13 +94,17 @@
   margin: 30px;
   padding-top: 10px;
   position: relative;
-
 }
+
 
 .friendship-card{
   border: 1px $f15 solid;
   border-radius: 20px;
-  max-width: 300px;
+  max-width: 500px;
   padding: 8px 16px;
 
 }
+.friendship-card i{
+  color:#86FF31;
+}
+

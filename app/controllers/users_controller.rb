@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @friendships = Friendship.where("asker_id = ? OR receiver_id = ?", @user.id, @user.id).where(is_accepted: true)
     @chatroom = Chatroom.find_by("sender_id = ? OR recipient_id = ?", @user.id, @user.id)
+
   end
 
   def decline_friendship
