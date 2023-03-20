@@ -10,6 +10,7 @@ class AvatarsController < ApplicationController
     @user = current_user
     @user.avatar_img = svg
     @user.save!
+
     redirect_to user_path(@user)
   end
 

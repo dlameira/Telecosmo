@@ -173,9 +173,9 @@
     <%= link_to "restart", new_avatar_path, class:'button-two' %>
 
     <%= form_with url: avatars_path do |f|%>
-      <% text_field_tag :status, '', data: { avatar_target: "inputOne" }%>
-      <%= f.submit %>
-    <% end %>
+      <%= text_field_tag :status, '', data: { avatar_target: "inputOne" }, class: 'd-none'%>
+      <%= f.submit class: 'button-one'%>
+      <% end %>
   </div>
 
 </div>
