@@ -7,7 +7,13 @@ $headers-font: "Doyle", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 @font-face {
-  font-family: "Doyle";
-  src: font-url('fonts/Doyle.eot?#iefix') format('embedded-opentype'),
+  font-family: 'Doyle';
+  src: font-url('Doyle.otf');
 }
 $my-font: "Doyle";
+
+
+@font-face {
+  font-family: 'Sharp Sans Display No2';
+  src: url('SharpSansDisplayNo2.otf');
+}
