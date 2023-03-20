@@ -1,13 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
-import { Typed } from 'typed.js';
+import  Typed  from 'typed.js';
 
 
 // Connects to data-controller="pages"
 export default class extends Controller {
-static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "closeddoor", "opendoor"]
+static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "closeddoor", "opendoor", "momtext", "monster", "momtext2", "momtext3"]
 
   connect() {
-    console.log(this.oneTarget)
+    console.log(this.momtextTarget)
+
   }
 
   fadein(){
@@ -53,16 +54,37 @@ static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "
     this.helloTarget.style.zIndex = 3;
   }
 
+
   talk() {
     this.helloTarget.style.zIndex = 1;
     this.helloTarget.classList.add("hideslide");
     this.momdialogTarget.classList.remove("hideslide");
-    this.momdialogTarget.style.zIndex = 1;
+    this.momdialogTarget.style.zIndex = 3;
+
+    var option1 = {
+      strings: ['Hello, ^1000 SON?',
+      'YOU GOTTA GETTA OUT OF THERE...',
+      'THERE\'S A ...', 'A...'],
+      typeSpeed: 50
+    }
+
+    var typed = new Typed(this.momtextTarget, option1)
+    setTimeout(() => { this.monster() }, 10000)
+  }
+
+  monster() {
+    console.log('monsterfunction');
+    this.momdialogTarget.classList.add('hideslide');
+    this.helloTarget.style.zIndex = 3;
+    this.helloTarget.classList.remove("hideslide");
+    this.helloTarget.classList.add('the-boy-who-lived');
+
+    this.monsterTarget.style.zIndex = 2;
+    setTimeout(() => { this.monsterTarget.classList.remove('hideslide') }, 1500);
+    setTimeout(() => { this.monsterTarget.classList.add('eight-appear') }, 1500);
 
 
   }
-
-
 
 
 
