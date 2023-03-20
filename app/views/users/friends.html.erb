@@ -1,30 +1,48 @@
-<div class="container m-3">
+<div class="container my-3">
+
   <% @friendships.each do |f|  %>
+
     <div class="row justify-content-center mb-2">
+
       <% if @user == f.asker %>
+
         <% right_chatroom = Chatroom.find_by(sender_id: f.asker_id, recipient_id: f.receiver_id) || Chatroom.find_by(sender_id: f.receiver_id, recipient_id: f.asker_id) %>
         <%=link_to(user_path(f.receiver)) do%>
+
           <div class="d-flex justify-content-between">
-            <div class="user_friends"><%= f.receiver.nickname %></div>
-          <%end%>
-          <div class="d-flex justify-content-between">
+            <div class="user_friends">
+              <%= f.receiver.nickname %>
+            </div>
+
+        <%end%>
+
             <%= link_to "Message", chatroom_path(right_chatroom), class: 'button-two-small'%>
             <%= button_to "Delete", delete_friendship_user_path(f), method: :delete, class: 'button-one-small' %>
+
           </div>
-        </div>
 
       <%elsif @user == f.receiver %>
+
         <% right_chatroom = Chatroom.find_by(sender_id: f.asker_id, recipient_id: f.receiver_id) || Chatroom.find_by(sender_id: f.receiver_id, recipient_id: f.asker_id) %>
         <%=link_to(user_path(f.asker)) do %>
-          <div class="d-flex justify-content-between">
-            <div class="user_friends"> <%= f.asker.nickname%></div>
-          <%end%>
-          <div class="d-flex justify-content-between">
+
+          <div class="d-flex justify-content-between align-items-center friendship-card">
+
+            <div class="user_friends">
+              <%= f.asker.nickname%>
+            </div>
+
+        <%end%>
+
             <%= link_to "Message", chatroom_path(right_chatroom), class: 'button-two-small'%>
             <%= button_to "Delete", delete_friendship_user_path(f), method: :delete, class: 'button-one-small' %>
+
           </div>
-        </div>
+
       <%end%>
+
     </div>
+
   <% end %>
+
 </div>
