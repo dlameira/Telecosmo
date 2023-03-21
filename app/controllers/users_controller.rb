@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if current_user != @user
       Friendship.create(asker_id: current_user.id, receiver_id: @user.id)
     end
-    redirect_to @user
+    redirect_to user_path(@user)
   end
 
   def friends
@@ -29,14 +29,14 @@ class UsersController < ApplicationController
     authorize current_user
     @friendship = Friendship.find(params[:id])
     @friendship.destroy!
-    redirect_to current_user
+    redirect_to current_user, allow_other_host: true
   end
 
   def delete_friendship
     authorize current_user
     @friendship = Friendship.find_by(id: params[:id], is_accepted: true)
     @friendship.destroy!
-    redirect_to current_user
+    redirect_to friends_user_path  ,allow_other_host: true
   end
 
   def accept_friendship
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
                              name:"#{@friendship.asker.nickname} & #{@friendship.receiver.nickname}")
     @chatroom.save!
 
-    redirect_to current_user
+    redirect_to current_user, allow_other_host: true
   end
 
 
