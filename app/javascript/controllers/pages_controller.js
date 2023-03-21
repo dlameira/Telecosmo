@@ -4,7 +4,7 @@ import  Typed  from 'typed.js';
 
 // Connects to data-controller="pages"
 export default class extends Controller {
-static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "closeddoor", "opendoor", "momtext", "monster", "momtext2", "momtext3"]
+static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "closeddoor", "opendoor", "momtext", "monster", "momtext2", "momtext3", "final"]
 
   connect() {
     console.log(this.momtextTarget)
@@ -79,20 +79,31 @@ static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "
     this.helloTarget.classList.remove("hideslide");
     this.helloTarget.classList.add('the-boy-who-lived');
 
-    this.monsterTarget.style.zIndex = 2;
+    this.monsterTarget.style.zIndex = 4;
     setTimeout(() => { this.monsterTarget.classList.remove('hideslide') }, 1500);
     setTimeout(() => { this.monsterTarget.classList.add('eight-appear') }, 1500);
 
-
   }
 
+  final() {
+    console.log('final')
+    this.monsterTarget.classList.add("hideslide");
+    this.monsterTarget.style.zIndex = -1;
+    this.helloTarget.classList.add('hideslide');
+    this.helloTarget.style.zIndex = -2;
 
+    this.finalTarget.style.zIndex = 3;
+    setTimeout(() => { this.finalTarget.classList.remove('hideslide') }, 1500);
+
+  }
 
   //   this.mobileTarget.style.zIndex = -1;
   //   this.whoisTarget.style.zIndex = -1;
 
 
-
+  home() {
+    window.location.href = "http://localhost:3000/"
+  }
   // }
 
     // this.text1Target.classList.add("d-none");
