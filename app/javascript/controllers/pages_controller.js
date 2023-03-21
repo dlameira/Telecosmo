@@ -102,7 +102,7 @@ static targets = ["momdialog", "hello", "text1", "mobile", "curtain", "title", "
 
 
   home() {
-    window.location.href = "http://localhost:3000/"
+    window.location.href = "http://www.telecosmo.com.br/"
   }
   // }
 
