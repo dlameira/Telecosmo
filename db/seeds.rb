@@ -62,13 +62,13 @@ wagner = User.create!(email: 'wagner@telecosmo.com.br', password: '123456', nick
 
 
 
-Friendship.create!(asker_id: daniel.id, receiver_id: patrick.id, is_accepted: false)
-# # Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.nickname}")
+# Friendship.create!(asker_id: daniel.id, receiver_id: patrick.id, is_accepted: false)
+# # # Chatroom.create!(sender_id: user.id, recipient_id: pikachu.id, name: "#{user.nickname} & #{pikachu.nickname}")
 
-Friendship.create!(asker_id: fernando.id, receiver_id: patrick.id, is_accepted: false)
-# # Chatroom.create!(sender_id: ash.id, recipient_id: charmander.id, name: "#{ash.nickname} & #{charmander.nickname}")
+# Friendship.create!(asker_id: fernando.id, receiver_id: patrick.id, is_accepted: false)
+# # # Chatroom.create!(sender_id: ash.id, recipient_id: charmander.id, name: "#{ash.nickname} & #{charmander.nickname}")
 
- Friendship.create!(asker_id: joao.id, receiver_id: patrick.id, is_accepted: false)
+#  Friendship.create!(asker_id: joao.id, receiver_id: patrick.id, is_accepted: false)
 # # Chatroom.create!(sender_id: ash.id, recipient_id: squirtle.id, name: "#{ash.nickname} & #{squirtle.nickname}")
 
 
