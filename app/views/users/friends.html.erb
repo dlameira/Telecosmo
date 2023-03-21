@@ -11,6 +11,8 @@
 
 
           <div class="d-flex justify-content-between align-items-center friendship-card">
+            <div class="avatar-svg"><%= f.receiver.avatar_img.html_safe %></div>
+
             <div class="user_friends">
               <%= f.receiver.nickname %>
             </div>
@@ -35,23 +37,25 @@
         <% right_chatroom = Chatroom.find_by(sender_id: f.asker_id, recipient_id: f.receiver_id) || Chatroom.find_by(sender_id: f.receiver_id, recipient_id: f.asker_id) %>
         <%=link_to(user_path(f.asker)) do %>
 
-          <div class="d-flex justify-content-between align-items-center friendship-card">
+          <div class="d-flex justify-content-between align-items-center friendship-card text-center mt-2">
 
+            <div class="avatar-svg"><%= f.asker.avatar_img.html_safe %></div>
             <div class="user_friends">
               <%= f.asker.nickname%>
             </div>
 
         <%end%>
             <% if @user == current_user%>
-            <div class="two-buttons">
-            <%= link_to chatroom_path(right_chatroom) do %>
-                <i class="fas fa-comment fa-xl"> </i>
-            <%end%>
 
+              <div class="two-buttons">
+              <%= link_to chatroom_path(right_chatroom) do %>
+                  <i class="fas fa-comment fa-xl"> </i>
+              <%end%>
 
-            <%= link_to delete_friendship_user_path(f), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                <i class="far fa-trash-alt fa-xl"> </i>
-            <% end %>
+              <%= link_to delete_friendship_user_path(f), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                  <i class="far fa-trash-alt fa-xl"> </i>
+              <% end %>
+
             <% end %>
             </div>
 
