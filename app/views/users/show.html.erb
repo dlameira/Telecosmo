@@ -32,6 +32,7 @@
   </div>
 
   <div class="profile-container-card" >
+
     <%= link_to(friends_user_path(@user)) do %>
       <div class="profile-content">
         <h3>friends</h3>
@@ -76,34 +77,34 @@
       <% if @pending_friendships.any? && @user == current_user %>
         <% requests = @pending_friendships.count %>
         <% f = @pending_friendships.first %>
-        <div class="text-center">
-          <%= requests > 1 ?  "You Have #{requests} New Friends!" : "You Have a New Friend!" %>
+          <div class="text-center">
 
-          <div class="request-container-card">
-            <div class="button-container">
-              <span class="nickname"><%= f.asker.nickname %></span> Wants to be your friend
+            <%= requests > 1 ?  "You Have #{requests} New Friends!" : "You Have a New Friend!" %>
 
-                <div class="two-buttons"
->
-                    <%= button_to "Accept", accept_friendship_user_path(f), method: :patch, class: 'button-accept' %>
-                    <%= button_to "Decline", decline_friendship_user_path(f), method: :delete, class: 'button-decline' %>
-               </div>
-             </div>
+            <div class="request-container-card">
+              <div class="button-container">
+
+                <span class="nickname"><%= f.asker.nickname %></span> Wants to be your friend
+
+                <div class="two-buttons">
+                  <%= button_to "Accept", accept_friendship_user_path(f), method: :patch, class: 'button-accept' %>
+                  <%= button_to "Decline", decline_friendship_user_path(f), method: :delete, class: 'button-decline' %>
+                </div>
+
+              </div>
+            </div>
+
           </div>
-        </div>
-      <% end %>
-     </div>
-    </div>
+
+        <% end %>
+      </div>
+
+  </div>
 
 
-
-
-
-
-
-  <% if Friendship.exists?(asker_id: current_user.id, receiver_id: @user.id, is_accepted: true) || Friendship.exists?(asker_id: @user.id, receiver_id: current_user.id, is_accepted: true) %>
-    <%= link_to "message", chatroom_path(@chatroom), class: 'button-two'%>
-  <% end %>
+    <% if Friendship.exists?(asker_id: current_user.id, receiver_id: @user.id, is_accepted: true) || Friendship.exists?(asker_id: @user.id, receiver_id: current_user.id, is_accepted: true) %>
+      <%= link_to "message", chatroom_path(@chatroom), class: 'button-two'%>
+    <% end %>
 
   </div>
 
