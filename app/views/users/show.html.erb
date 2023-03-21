@@ -60,7 +60,7 @@
 
     <div>
 
-      <% if current_user != @user %>
+      <% unless current_user == @user || Friendship.exists?(asker: current_user, receiver: @user, is_accepted: true) ||Friendship.exists?(asker: @user, receiver: current_user, is_accepted: true) %>
         <% friendship_request = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: false) %>
         <% friendship_accepted = Friendship.find_by(asker: current_user, receiver: @user, is_accepted: true) %>
         <% if friendship_request %>
@@ -73,7 +73,7 @@
       <% end %>
 
     <div class="requests-notifications">
-      <% if @pending_friendships.any? %>
+      <% if @pending_friendships.any? && @user == current_user %>
         <% requests = @pending_friendships.count %>
         <% f = @pending_friendships.first %>
         <div class="text-center">
