@@ -57,9 +57,14 @@
   position: absolute;
  }
 
+.seven {
+  padding: 30px;
+}
+
 .medium-text {
   font-size: 30px;
   font-family: Doyle;
+  padding: 20px;
 }
 
 .eight{
@@ -70,6 +75,11 @@
   left: 54px;
   scale: 40%;
   filter: blur(10px);
+}
+
+.nine{
+  transition: opacity 2s;
+  text-align: center;
 }
 
 .eight-appear{
@@ -84,4 +94,9 @@
   position: absolute;
   top: -1341px;
   left: -963px;
+}
+
+.to-be-continued{
+  color: $f5;
+  padding-top: 40px;
 }
