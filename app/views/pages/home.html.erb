@@ -3,11 +3,15 @@
 <h3 class="home-categories-titles">Original</h3>
 <%= render 'shared/home_content' %>
 
+<% if user_signed_in? %>
+  <% if current_user.bookmarks.any? %>
+  <h3 class="home-categories-titles">Bookmarks</h3>
+  <%= render 'shared/my_bookmarks' %>
+  <% end %>
+<% end %>
+
 <h3 class="home-categories-titles">Recent added</h3>
 <%= render 'shared/home_content' %>
 
 <h3 class="home-categories-titles">Top universes</h3>
 <%= render 'shared/home_content' %>
-
-<h3 class="home-categories-titles">Bookmarks</h3>
-<%= render 'shared/my_bookmarks' %>
