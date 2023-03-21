@@ -44,9 +44,9 @@ class UsersController < ApplicationController
     @friendship = Friendship.find(params[:id])
     @friendship.update(is_accepted: true)
     @chatroom = Chatroom.new(sender_id: @friendship.asker_id, recipient_id:@friendship.receiver_id,
-                             name:"test")
-
+                             name:"#{@friendship.asker.nickname} & #{@friendship.receiver.nickname}")
     @chatroom.save!
+
     redirect_to current_user
   end
 
