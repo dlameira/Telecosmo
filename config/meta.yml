@@ -1,0 +1,5 @@
+meta_product_name: "Telecosmo"
+meta_title: "Telecosmo - Travel through stories"
+meta_description: "Telecosmo is a groundbreaking app that takes reading to a whole new level. With Telecosmo, you'll discover a universe of interactive books that come to life with stunning visuals, sound effects, and animations. Immerse yourself in stories that you can touch, hear, and even smell, as you explore new worlds and characters in ways that you've never experienced before."
+meta_image: "telecosmo_icon.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
